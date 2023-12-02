@@ -95,7 +95,7 @@ const Hero = () => {
         <div className="h-screen md:mx-10">
             <div className="h-fit bg-white mt-10 md:p-10 p-3 md:rounded-md">
                 <div className="flex flex-col md:flex-row justify-between ">
-                    <h1 className="text-center md:text-2xl">Prayer Times in {location}</h1>
+                    <h1 className="text-center md:text-2xl">Salat Times in {location}</h1>
                     {/* <p>{`${hours}:${minutes}:${sec}${ampm}`}</p> */}
                     <DigitalClock />
 

@@ -1,13 +1,14 @@
 // import React from 'react';
 
 import Hero from "./Hero";
-import NextDateComponent from "./NextDateComponent";
+// import NextDateComponent from "./NextDateComponent";
+import Calendermain from "./calender/Calendermain";
 
 const Home = () => {
     return (
         <div>
-            {/* <NextDateComponent /> */}
             <Hero></Hero>
+            <Calendermain></Calendermain>
         </div>
     );
 };
