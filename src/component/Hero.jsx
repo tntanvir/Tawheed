@@ -2,10 +2,23 @@ import { useEffect } from "react";
 import { useState } from "react";
 import CountdownTimer from "./CountdownTimer";
 import DigitalClock from "./DigitalClock";
+// import { MessageDialog } from "./MessageDialog";
+import {
+    Button,
+    Dialog,
+    DialogHeader,
+    DialogBody,
+    DialogFooter,
+    Input,
+    Textarea,
+    Option,
+} from "@material-tailwind/react";
+import { Typography } from "@material-tailwind/react";
+import { Select } from "@material-tailwind/react";
+import fack from '../fack.json'
 
 
 const Hero = () => {
-    const [currentTime, setCurrentTime] = useState(new Date());
     const [data, setData] = useState([]);
     const [alldata, setAllData] = useState([]);
     // ________________________________
@@ -28,54 +41,61 @@ const Hero = () => {
     }, []);
     // --------------------------------------
 
-    useEffect(() => {
-
-        const interval = setInterval(() => {
-            setCurrentTime(new Date());
-        }, 1000);
 
 
-        return () => clearInterval(interval);
-    }, []);
-    useEffect(() => {
-        fetch(`https://api.aladhan.com/v1/timingsByAddress/${localDate}?address=Rangpur`)
-            .then(res => res.json())
-            .then(data => setData(data.data.timings))
-    }, []);
-    useEffect(() => {
-        fetch(`https://api.aladhan.com/v1/timingsByAddress/${localDate}?address=Rangpur`)
 
-            .then(res => res.json())
-            .then(data => setAllData(data.data))
-    }, []);
-
-
-    const hours = currentTime.getHours() % 12 || 12; // Convert to 12-hour format
-    const minutes = currentTime.getMinutes();
-    const ampm = currentTime.getHours() >= 12 ? 'PM' : 'AM';
-    const sec = currentTime.getSeconds();
 
     const count = (data) => {
-        // console.log(data);
         const [hours, minutes] = data.split(':');
         const period = hours >= 12 ? 'PM' : 'AM';
         const hours12 = (hours % 12) || 12;
-        // console.log(hours12, period, data);
         return `${hours12}:${minutes} ${period}`
 
     }
 
+    //popup---------------
+    const [open, setOpen] = useState(false);
+    const [location, setLocation] = useState('Dhaka');
+    const [location2, setLocation2] = useState('');
+
+    const handleOpen = () => setOpen(!open);
+    const selectvlue = (e) => {
+        setLocation2(e)
+    }
+    const Update = () => {
+        handleOpen();
+        setLocation(location2);
+        localStorage.setItem('sTime', location2);
+
+    }
 
 
+    useEffect(() => {
+        const stored = localStorage.getItem('sTime');
+        if (stored) {
+            setLocation(stored);
+        }
+        fetch(`https://api.aladhan.com/v1/timingsByAddress/${localDate}?address=${location}`)
+            .then(res => res.json())
+            .then(data => setData(data.data.timings))
+    }, [location]);
+    useEffect(() => {
+        const stored = localStorage.getItem('sTime');
+        if (stored) {
+            setLocation(stored);
+        }
+        fetch(`https://api.aladhan.com/v1/timingsByAddress/${localDate}?address=${location}`)
 
-    // console.log(alldata);
+            .then(res => res.json())
+            .then(data => setAllData(data.data))
+    }, [location]);
 
 
     return (
         <div className="h-screen md:mx-10">
             <div className="h-fit bg-white mt-10 md:p-10 p-3 md:rounded-md">
                 <div className="flex flex-col md:flex-row justify-between ">
-                    <h1 className="text-center md:text-2xl">Prayer Times in Dhaka</h1>
+                    <h1 className="text-center md:text-2xl">Prayer Times in {location}</h1>
                     {/* <p>{`${hours}:${minutes}:${sec}${ampm}`}</p> */}
                     <DigitalClock />
 
@@ -110,7 +130,7 @@ const Hero = () => {
                             <div className="bg-gray-100 rounded-md text-center w-36 h-36 md:w-48 md:h-48   flex justify-center items-center flex-col md:p-3 cursor-pointer">
                                 <h1 className="font-semibold text-2xl ">Fajr</h1>
                                 <h1 className="text-2xl ">0{count(data.Fajr)}</h1>
-                                <CountdownTimer time={count(data.Fajr)} />
+                                <CountdownTimer time={count(data.Fajr)} id={1} />
                                 {/* <CountdownTimer time="10:11 AM" /> */}
                             </div>
                             : <div></div>
@@ -122,7 +142,7 @@ const Hero = () => {
                             <div className="bg-gray-100 rounded-md text-center w-36 h-36 md:w-48 md:h-48   flex justify-center items-center flex-col md:p-3 cursor-pointer">
                                 <h1 className="font-semibold text-2xl">Dhuhr</h1>
                                 <h1 className="text-2xl ">{count(data.Dhuhr)}</h1>
-                                <CountdownTimer time={count(data.Dhuhr)} />
+                                <CountdownTimer time={count(data.Dhuhr)} id={2} />
 
                             </div>
                             : <div></div>
@@ -134,7 +154,7 @@ const Hero = () => {
                             <div className="bg-gray-100 rounded-md text-center w-36 h-36 md:w-48 md:h-48   flex justify-center items-center flex-col md:p-3 cursor-pointer">
                                 <h1 className="font-semibold text-2xl">Asr</h1>
                                 <h1 className="text-2xl ">0{count(data.Asr)}</h1>
-                                <CountdownTimer time={count(data.Asr)} />
+                                <CountdownTimer time={count(data.Asr)} id={3} />
 
                             </div>
                             : <div></div>
@@ -146,7 +166,7 @@ const Hero = () => {
                             <div className="bg-gray-100 rounded-md text-center w-36 h-36 md:w-48 md:h-48   flex justify-center items-center flex-col md:p-3 cursor-pointer ">
                                 <h1 className="font-semibold text-2xl">Maghrib</h1>
                                 <h1 className="text-2xl "> 0{count(data.Maghrib)}</h1>
-                                <CountdownTimer time={count(data.Maghrib)} />
+                                <CountdownTimer time={count(data.Maghrib)} id={4} />
 
                             </div>
                             : <div></div>
@@ -158,7 +178,7 @@ const Hero = () => {
                             <div className="bg-gray-100 rounded-md text-center w-36 h-36 md:w-48 md:h-48   flex justify-center items-center flex-col md:p-3 cursor-pointer">
                                 <h1 className="font-semibold text-2xl">Isha</h1>
                                 <h1 className="text-2xl ">0{count(data.Isha)}</h1>
-                                <CountdownTimer time={count(data.Isha)} />
+                                <CountdownTimer time={count(data.Isha)} id={5} />
 
                             </div>
                             : <div></div>
@@ -172,8 +192,55 @@ const Hero = () => {
                                 <p>{alldata.meta.timezone}</p>
                                 <p className="font-bold">{alldata.meta.method.name}</p>
                                 <p>Fajr {alldata.meta.method.params.Fajr} degrees,Isha {alldata.meta.method.params.Isha} degrees</p>
+                                <p className="text-sm text-end text-green-500 hover:underline cursor-pointer" onClick={handleOpen}>wrong location?</p>
+
                             </div> : <div></div>
                         }
+                        {/* <MessageDialog Open={open}></MessageDialog> */}
+                        <>
+                            {/* <Button onClick={handleOpen}>Message Dialog</Button> */}
+                            <Dialog open={open} size="xs" handler={handleOpen} className="absolute top-0">
+                                <div className="flex items-center justify-between">
+                                    <DialogHeader className="flex flex-col items-start">
+                                        {" "}
+                                        <Typography className="mb-1" variant="h4">
+                                            Select Location
+                                        </Typography>
+                                    </DialogHeader>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24"
+                                        fill="currentColor"
+                                        className="mr-3 h-5 w-5 cursor-pointer"
+                                        onClick={handleOpen}
+                                    >
+                                        <path
+                                            fillRule="evenodd"
+                                            d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z"
+                                            clipRule="evenodd"
+                                        />
+                                    </svg>
+                                </div>
+                                <DialogBody>
+
+                                    <Select label="Select Location"
+                                        onChange={selectvlue}
+                                        required>
+                                        {
+                                            fack.map((e) => <Option key={e.id} value={e.name}>{e.name}</Option>)
+                                        }
+                                    </Select>
+                                </DialogBody>
+                                <DialogFooter className="space-x-2">
+                                    <Button variant="text" color="gray" onClick={handleOpen}>
+                                        cancel
+                                    </Button>
+                                    <Button variant="gradient" color="green" onClick={Update}>
+                                        Update
+                                    </Button>
+                                </DialogFooter>
+                            </Dialog>
+                        </>
                     </p>
                 </div>
             </div>
