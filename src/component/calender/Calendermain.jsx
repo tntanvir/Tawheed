@@ -1,12 +1,18 @@
-import React from 'react';
+// import React from 'react';
+
 import { ButtonGroup } from '@material-tailwind/react';
 import { Select, Option } from "@material-tailwind/react";
 import { Button } from '@material-tailwind/react';
-
+const TABLE_HEAD = ["Date", "Fajar", "Dhore", "Asr", "Megrib", "Isha"];
 // import fack from '../../fack.json';
 import year from '../../year.json';
 import months from '../../months.json';
 import { useState } from 'react';
+import { Typography } from '@material-tailwind/react';
+
+// -------------
+import React, { useRef } from 'react';
+import html2pdf from 'html2pdf.js';
 
 const Calendermain = () => {
     const [vlu, setVlu] = useState(2);
@@ -61,22 +67,44 @@ const Calendermain = () => {
     const selectMonth = (e) => {
         setMont(e);
     }
+    const [clgdata, setClgdata] = useState(null);
     const ganarate = () => {
         if (vlu == 2) {
             // console.log(yer, mont);
             fetch(`https://api.aladhan.com/v1/calendarByAddress/${yer}/${mont}?address=${localStorage.getItem('sTime')}`)
                 .then(res => res.json())
-                .then(data => console.log(data.data))
+                .then(data => setClgdata(data.data))
+            // console.log(clgdata);
+
 
         } else {
             console.log(yer);
 
         }
+        // console.log(clgdata);
     }
+    const count = (data) => {
+        const [y, m] = data.split(' ');
+        const [hours, minutes] = y.split(':');
+        const period = hours >= 12 ? 'PM' : 'AM';
+        const hours12 = (hours % 12) || 12;
+        return `${hours12}:${minutes} ${period}`
+
+    }
+    const contentRef = useRef(null);
+
+    const downloadPdf = () => {
+        const content = contentRef.current;
+
+        if (content) {
+            // Use html2pdf to generate PDF from the HTML content
+            html2pdf(content);
+        }
+    };
 
 
     return (
-        <div className="h-screen md:mx-10">
+        <div className="h-fit min-h-screen md:mx-10">
             <div className="h-fit bg-white mt-10 md:p-10 p-3 md:rounded-md">
 
                 <h1 className='text-2xl font-semibold'>Salat Timetable</h1>
@@ -117,10 +145,85 @@ const Calendermain = () => {
 
                             </div>
                         }
-                        <div className='flex items-center justify-center mt-5'>
+                        <div className='flex items-center justify-center mt-5 gap-3'>
                             <Button variant='gradient' onClick={ganarate}>Ganarate</Button>
+                            {clgdata && <Button variant='gradient' onClick={downloadPdf}>download</Button>}
                         </div>
                     </div>
+
+                </div>
+                <div className='pt-3 overflow-scroll md:overflow-hidden' >
+                    {
+                        clgdata && <div ref={contentRef}>
+                            <h1 className='text-center text-2xl'>Salat Timetable</h1>
+                            <h1 className='text-center text-4xl'>{localStorage.getItem('sTime')}</h1>
+                            <h1 className='text-center text-2xl'>{yer}/{mont}</h1>
+                            <table className="w-full min-w-max table-auto text-left border border-gray-500 mt-4">
+                                {/* {console.log(e.date.readable)} */}
+
+                                <thead>
+                                    <tr>
+                                        {TABLE_HEAD.map((head) => (
+                                            <th key={head} className="border-b border-blue-gray-100 bg-blue-gray-50 p-4">
+                                                <Typography
+                                                    variant="small"
+                                                    color="blue-gray"
+                                                    className="font-normal leading-none opacity-70"
+                                                >
+                                                    {head}
+                                                </Typography>
+                                            </th>
+                                        ))}
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {
+                                        clgdata.map((e) => (
+                                            <tr key={e.date.readable} className="even:bg-blue-gray-50/50">
+                                                <td className="p-4">
+                                                    <Typography variant="small" color="blue-gray" className="font-normal">
+                                                        {e.date.readable}
+                                                    </Typography>
+                                                </td>
+                                                <td className="p-4">
+                                                    <Typography variant="small" color="blue-gray" className="font-normal">
+                                                        {
+                                                            count(e.timings.Fajr)
+                                                        }
+                                                    </Typography>
+                                                </td>
+                                                <td className="p-4">
+                                                    <Typography variant="small" color="blue-gray" className="font-normal">
+                                                        {count(e.timings.Dhuhr)}
+                                                    </Typography>
+                                                </td>
+                                                <td className="p-4">
+                                                    <Typography variant="small" color="blue-gray" className="font-normal">
+                                                        {count(e.timings.Asr)}
+                                                    </Typography>
+                                                </td>
+                                                <td className="p-4">
+                                                    <Typography variant="small" color="blue-gray" className="font-normal">
+                                                        {count(e.timings.Maghrib)}
+                                                    </Typography>
+                                                </td>
+                                                <td className="p-4">
+                                                    <Typography variant="small" color="blue-gray" className="font-normal">
+                                                        {count(e.timings.Isha)}
+                                                    </Typography>
+                                                </td>
+                                                {/* <td className="p-4">
+                                                <Typography as="a" href="#" variant="small" color="blue-gray" className="font-medium">
+                                                
+                                                </Typography>
+                                            </td> */}
+                                            </tr>
+                                        ))
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
 
                 </div>
 
