@@ -1,14 +1,3 @@
-// import React from 'react';
-
-// const Navber = () => {
-//     return (
-//         <div>
-
-//         </div>
-//     );
-// };
-
-// export default Navber;
 import React from "react";
 import {
     Navbar,
@@ -93,26 +82,26 @@ function NavListMenu() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
     const renderItems = navListMenuItems.map(
         ({ icon, title, description }, key) => (
-            <a href="#" key={key}>
-                <MenuItem className="flex items-center gap-3 rounded-lg">
-                    <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
+            <a href="#" key={key} className="">
+                <MenuItem className="flex items-center gap-3 rounded-lg hover:bg-[#323232]">
+                    <div className="flex items-center justify-center rounded-lg bg-[#1d4ed8] p-2 ">
                         {" "}
                         {React.createElement(icon, {
                             strokeWidth: 2,
-                            className: "h-6 text-gray-900 w-6",
+                            className: "h-6 text-white w-6",
                         })}
                     </div>
                     <div>
                         <Typography
                             variant="h6"
-                            color="blue-gray"
+                            color="white"
                             className="flex items-center text-sm font-bold"
                         >
                             {title}
                         </Typography>
                         <Typography
                             variant="paragraph"
-                            className="text-xs !font-medium text-blue-gray-500"
+                            className="text-xs !font-medium text-white"
                         >
                             {description}
                         </Typography>
@@ -130,11 +119,12 @@ function NavListMenu() {
                 offset={{ mainAxis: 20 }}
                 placement="bottom"
                 allowHover={true}
+
             >
                 <MenuHandler>
-                    <Typography as="div" variant="small" className="font-medium">
+                    <Typography as="div" variant="small" className="font-medium bg-transparent">
                         <ListItem
-                            className="flex items-center gap-2 py-2 pr-4 font-medium text-gray-900"
+                            className="flex items-center gap-2 py-2 pr-4 font-bold hover:bg-transparent hover:text-white text-white "
                             selected={isMenuOpen || isMobileMenuOpen}
                             onClick={() => setIsMobileMenuOpen((cur) => !cur)}
                         >
@@ -152,8 +142,8 @@ function NavListMenu() {
                         </ListItem>
                     </Typography>
                 </MenuHandler>
-                <MenuList className="hidden max-w-screen-xl rounded-xl lg:block">
-                    <ul className="grid grid-cols-3 gap-y-2 outline-none outline-0">
+                <MenuList className="hidden max-w-screen-xl rounded-xl lg:block bg-[#18181B]">
+                    <ul className="grid grid-cols-3 gap-y-2 outline-none outline-0 ">
                         {renderItems}
                     </ul>
                 </MenuList>
@@ -167,17 +157,17 @@ function NavListMenu() {
 
 function NavList() {
     return (
-        <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
+        <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1  ">
             <Typography
                 as="li"
                 // href="#"
                 variant="small"
-                color="blue-gray"
+                color="white"
                 className="font-medium"
             >
                 {/* <ListItem className="flex items-center gap-2 py-2 pr-4">Home</ListItem> */}
                 <Link to="/home" >
-                    <ListItem className="flex items-center gap-2 py-2 pr-4">
+                    <ListItem className="flex items-center gap-2 py-2 pr-4 hover:bg-transparent hover:text-[#1d4ed8] font-bold duration-500">
                         Home
                     </ListItem>
                 </Link>
@@ -188,10 +178,10 @@ function NavList() {
                 as="a"
                 href="#"
                 variant="small"
-                color="blue-gray"
+                color="white"
                 className="font-medium"
             >
-                <ListItem className="flex items-center gap-2 py-2 pr-4">
+                <ListItem className="flex items-center gap-2 py-2 pr-4 hover:bg-transparent hover:text-[#1d4ed8] font-bold duration-500">
                     Contact Us
                 </ListItem>
             </Typography>
@@ -208,10 +198,25 @@ export function NavbarWithMegaMenu() {
             () => window.innerWidth >= 960 && setOpenNav(false),
         );
     }, []);
+    // -----------------------------------------------
+
+
+    const [nav, setNav] = React.useState(false);
+    React.useEffect(() => {
+        window.addEventListener('scroll', () => {
+            // const nav = document.querySelector('nav')
+            window.scrollY > 0 ? setNav(true) : setNav(false)
+        })
+    })
+
+
+
+
+
 
     return (
-        <Navbar className="mx-auto max-w-full px-4 py-2 rounded-none">
-            <div className="flex items-center justify-between text-blue-gray-900">
+        <Navbar className={`sticky  top-0 m-0 mx-auto max-w-full px-4 py-2 rounded-none bg-[#18181B] text-white border-0 ${nav ? 'shadow-md' : 'shadow-none'}`}>
+            <div className="flex items-center justify-between text-white">
                 <Typography
                     as="li"
                     // href="#"
@@ -225,11 +230,11 @@ export function NavbarWithMegaMenu() {
                 <div className="hidden lg:block">
                     <NavList />
                 </div>
-                <div className="hidden gap-2 lg:flex">
-                    <Button variant="text" size="sm" color="blue-gray">
+                <div className="hidden gap-3 lg:flex">
+                    <Button variant="outline" className="bg-transparent text-white shadow-none border border-transparent hover:shadow-none hover:border-[#1d4ed8] " size="sm" color="white">
                         Log In
                     </Button>
-                    <Button variant="gradient" size="sm">
+                    <Button className="bg-[#1d4ed8]" size="sm">
                         Sign In
                     </Button>
                 </div>
@@ -252,7 +257,7 @@ export function NavbarWithMegaMenu() {
                     <Button variant="outlined" size="sm" color="blue-gray" fullWidth>
                         Log In
                     </Button>
-                    <Button variant="gradient" size="sm" fullWidth>
+                    <Button className="bg-[#1d4ed8]" size="sm" fullWidth>
                         Sign In
                     </Button>
                 </div>

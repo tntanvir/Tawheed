@@ -93,12 +93,11 @@ const Hero = () => {
 
     return (
         <div className="h-screen md:mx-10">
-            <div className="h-fit bg-white mt-10 md:p-10 p-3 md:rounded-md">
+            <div className="h-fit bg-[#27272a] text-white mt-10 md:p-10 p-3 md:rounded-md">
                 <div className="flex flex-col md:flex-row justify-between ">
                     <h1 className="text-center md:text-2xl">Salat Times in {location}</h1>
                     {/* <p>{`${hours}:${minutes}:${sec}${ampm}`}</p> */}
                     <DigitalClock />
-
                     <div className="">
                         <h1 className="md:text-end text-center">
                             {
@@ -127,7 +126,7 @@ const Hero = () => {
                     {
                         data.Fajr ?
 
-                            <div className="bg-gray-100 rounded-md text-center w-36 h-36 md:w-48 md:h-48   flex justify-center items-center flex-col md:p-3 cursor-pointer">
+                            <div className="bg-[#323232] hover:bg-[#27272a] hover:border-2 hover:border-[#1d4ed8] hover:duration-100 hover:shadow-lg hover:shadow-[#1d4ed8]   hover:bg[#7777] rounded-md text-center w-36 h-36 md:w-48 md:h-48   flex justify-center items-center flex-col md:p-3 cursor-pointer">
                                 <h1 className="font-semibold text-2xl ">Fajr</h1>
                                 <h1 className="text-2xl ">0{count(data.Fajr)}</h1>
                                 <CountdownTimer time={count(data.Fajr)} id={1} />
@@ -139,7 +138,7 @@ const Hero = () => {
                         data.Dhuhr ?
 
                             // console.log(data.Fajr)
-                            <div className="bg-gray-100 rounded-md text-center w-36 h-36 md:w-48 md:h-48   flex justify-center items-center flex-col md:p-3 cursor-pointer">
+                            <div className="bg-[#323232] hover:bg-[#27272a] hover:border-2 hover:border-[#1d4ed8] hover:duration-100 hover:shadow-lg hover:shadow-[#1d4ed8] shadow-sm rounded-md text-center w-36 h-36 md:w-48 md:h-48   flex justify-center items-center flex-col md:p-3 cursor-pointer">
                                 <h1 className="font-semibold text-2xl">Dhuhr</h1>
                                 <h1 className="text-2xl ">{count(data.Dhuhr)}</h1>
                                 <CountdownTimer time={count(data.Dhuhr)} id={2} />
@@ -151,7 +150,7 @@ const Hero = () => {
                         data.Asr ?
 
                             // console.log(data.Asr)
-                            <div className="bg-gray-100 rounded-md text-center w-36 h-36 md:w-48 md:h-48   flex justify-center items-center flex-col md:p-3 cursor-pointer">
+                            <div className="bg-[#323232] hover:bg-[#27272a] hover:border-2 hover:border-[#1d4ed8] hover:duration-100 hover:shadow-lg hover:shadow-[#1d4ed8] shadow-sm   rounded-md text-center w-36 h-36 md:w-48 md:h-48   flex justify-center items-center flex-col md:p-3 cursor-pointer">
                                 <h1 className="font-semibold text-2xl">Asr</h1>
                                 <h1 className="text-2xl ">0{count(data.Asr)}</h1>
                                 <CountdownTimer time={count(data.Asr)} id={3} />
@@ -163,7 +162,7 @@ const Hero = () => {
                         data.Maghrib ?
 
                             // console.log(data.Asr)
-                            <div className="bg-gray-100 rounded-md text-center w-36 h-36 md:w-48 md:h-48   flex justify-center items-center flex-col md:p-3 cursor-pointer ">
+                            <div className="bg-[#323232] hover:bg-[#27272a] hover:border-2 hover:border-[#1d4ed8] hover:duration-100 hover:shadow-lg hover:shadow-[#1d4ed8] shadow-sm   rounded-md text-center w-36 h-36 md:w-48 md:h-48   flex justify-center items-center flex-col md:p-3 cursor-pointer">
                                 <h1 className="font-semibold text-2xl">Maghrib</h1>
                                 <h1 className="text-2xl "> 0{count(data.Maghrib)}</h1>
                                 <CountdownTimer time={count(data.Maghrib)} id={4} />
@@ -175,7 +174,7 @@ const Hero = () => {
                         data.Isha ?
 
                             // console.log(data.Asr)
-                            <div className="bg-gray-100 rounded-md text-center w-36 h-36 md:w-48 md:h-48   flex justify-center items-center flex-col md:p-3 cursor-pointer">
+                            <div className="bg-[#323232] hover:bg-[#27272a] hover:border-2 hover:border-[#1d4ed8] hover:duration-100 hover:shadow-lg hover:shadow-[#1d4ed8] shadow-sm  hover:bg[#7777] rounded-md text-center w-36 h-36 md:w-48 md:h-48   flex justify-center items-center flex-col md:p-3 cursor-pointer">
                                 <h1 className="font-semibold text-2xl">Isha</h1>
                                 <h1 className="text-2xl ">0{count(data.Isha)}</h1>
                                 <CountdownTimer time={count(data.Isha)} id={5} />
@@ -188,11 +187,17 @@ const Hero = () => {
                 <div>
                     <p>
                         {
-                            alldata.meta ? <div className="text-gray-500">
-                                <p>{alldata.meta.timezone}</p>
-                                <p className="font-bold">{alldata.meta.method.name}</p>
-                                <p>Fajr {alldata.meta.method.params.Fajr} degrees,Isha {alldata.meta.method.params.Isha} degrees</p>
-                                <p className="text-sm text-end text-green-500 hover:underline cursor-pointer" onClick={handleOpen}>wrong location?</p>
+                            alldata.meta ? <div className="flex justify-between ">
+
+                                <div className="text-gray-500">
+                                    <p>{alldata.meta.timezone}</p>
+                                    <p className="font-bold">{alldata.meta.method.name}</p>
+                                    <p>Fajr {alldata.meta.method.params.Fajr} degrees,Isha {alldata.meta.method.params.Isha} degrees</p>
+                                </div>
+                                <div className="flex items-end justify-end">
+
+                                    <p className="text-sm  text-[#1d4ed8] hover:underline cursor-pointer" onClick={handleOpen}>wrong location?</p>
+                                </div>
 
                             </div> : <div></div>
                         }
@@ -235,7 +240,7 @@ const Hero = () => {
                                     <Button variant="text" color="gray" onClick={handleOpen}>
                                         cancel
                                     </Button>
-                                    <Button variant="gradient" color="green" onClick={Update}>
+                                    <Button className="bg-[#1d4ed8]" onClick={Update}>
                                         Update
                                     </Button>
                                 </DialogFooter>
