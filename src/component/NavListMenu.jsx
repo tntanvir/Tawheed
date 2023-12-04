@@ -215,7 +215,7 @@ export function NavbarWithMegaMenu() {
 
 
     return (
-        <Navbar className={`sticky  top-0 m-0 mx-auto max-w-full px-4 py-2 rounded-none bg-[#18181B] text-white border-0 ${nav ? 'shadow-md' : 'shadow-none'}`}>
+        <Navbar className={`sticky z-50  top-0 m-0 mx-auto max-w-full px-4 py-2 rounded-none bg-[#18181B] text-white border-0 ${nav ? 'shadow-md' : 'shadow-none'}`}>
             <div className="flex items-center justify-between text-white">
                 <Typography
                     as="li"
