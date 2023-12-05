@@ -3,6 +3,7 @@
 import Home from "./component/Home";
 import { NavbarWithMegaMenu } from "./component/NavListMenu"
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import Notfound from "./component/Notfound";
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
+        <Route path="*" element={<Notfound />} />
       </Routes>
 
       {/* <Route path="/home" element={<Home />} />

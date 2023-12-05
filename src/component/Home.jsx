@@ -1,16 +1,19 @@
 // import React from 'react';
 
 import Hero from "./Hero";
+import MainHome from "./MainHome";
 
 import Calendermain from "./calender/Calendermain";
 
 const Home = () => {
     return (
-        <div >
+        <div className="Poppins ">
+            <MainHome />
             <Hero></Hero>
             <Calendermain></Calendermain>
 
         </div>
+
     );
 };
 
