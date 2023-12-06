@@ -19,73 +19,82 @@ import {
 } from "@heroicons/react/24/outline";
 import {
     Bars4Icon,
-    GlobeAmericasIcon,
-    NewspaperIcon,
+    // GlobeAmericasIcon,
+    // NewspaperIcon,
     PhoneIcon,
-    RectangleGroupIcon,
-    SquaresPlusIcon,
-    SunIcon,
-    TagIcon,
+    // RectangleGroupIcon,
+    // SquaresPlusIcon,
+    // SunIcon,
+    // TagIcon,
     UserGroupIcon,
 } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
+import { GiBookmarklet } from "react-icons/gi";
 const navListMenuItems = [
     {
-        title: "Products",
+        title: "Al-Quran",
         description: "Find the perfect solution for your needs.",
-        icon: SquaresPlusIcon,
+        icon: GiBookmarklet,
+        link: "/alquran",
     },
     {
         title: "About Us",
         description: "Meet and learn about our dedication",
         icon: UserGroupIcon,
+        link: "/aboutus",
+
     },
     {
         title: "Blog",
         description: "Find the perfect solution for your needs.",
         icon: Bars4Icon,
+        link: "/blog",
+
     },
-    {
-        title: "Services",
-        description: "Learn how we can help you achieve your goals.",
-        icon: SunIcon,
-    },
-    {
-        title: "Support",
-        description: "Reach out to us for assistance or inquiries",
-        icon: GlobeAmericasIcon,
-    },
+    // {
+    //     title: "Services",
+    //     description: "Learn how we can help you achieve your goals.",
+    //     icon: SunIcon,
+    // },
+    // {
+    //     title: "Support",
+    //     description: "Reach out to us for assistance or inquiries",
+    //     icon: GlobeAmericasIcon,
+    // },
     {
         title: "Contact",
         description: "Find the perfect solution for your needs.",
         icon: PhoneIcon,
+        link: "/contact",
     },
-    {
-        title: "News",
-        description: "Read insightful articles, tips, and expert opinions.",
-        icon: NewspaperIcon,
-    },
-    {
-        title: "Products",
-        description: "Find the perfect solution for your needs.",
-        icon: RectangleGroupIcon,
-    },
-    {
-        title: "Special Offers",
-        description: "Explore limited-time deals and bundles",
-        icon: TagIcon,
-    },
+    // {
+    //     title: "News",
+    //     description: "Read insightful articles, tips, and expert opinions.",
+    //     icon: NewspaperIcon,
+    // },
+    // {
+    //     title: "Products",
+    //     description: "Find the perfect solution for your needs.",
+    //     icon: RectangleGroupIcon,
+    // },
+    // {
+    //     title: "Special Offers",
+    //     description: "Explore limited-time deals and bundles",
+    //     icon: TagIcon,
+    // },
 ];
 
 function NavListMenu() {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
     const renderItems = navListMenuItems.map(
-        ({ icon, title, description }, key) => (
-            <a href="#" key={key} className="">
-                <MenuItem className="flex items-center gap-3 rounded-lg hover:bg-[#323232]">
-                    <div className="flex items-center justify-center rounded-lg bg-[#1d4ed8] p-2 ">
-                        {" "}
+        ({ icon, title, description, link }, key) => (
+            // <a key={key} className="">
+            <Link key={key} to={link} >
+
+                <MenuItem className="flex  items-center gap-3 rounded-lg hover:bg-[#323232]">
+                    <div className="flex  items-center justify-center rounded-lg bg-[#1d4ed8] p-2 ">
+                        { }
                         {React.createElement(icon, {
                             strokeWidth: 2,
                             className: "h-6 text-white w-6",
@@ -107,7 +116,8 @@ function NavListMenu() {
                         </Typography>
                     </div>
                 </MenuItem>
-            </a>
+            </Link>
+            // </a>
         ),
     );
 
@@ -116,16 +126,16 @@ function NavListMenu() {
             <Menu
                 open={isMenuOpen}
                 handler={setIsMenuOpen}
-                offset={{ mainAxis: 20 }}
+                // offset={{ mainAxis: 20 }}
                 placement="bottom"
-                allowHover={true}
+            // allowHover={true}
 
             >
                 <MenuHandler>
                     <Typography as="div" variant="small" className="font-medium bg-transparent">
                         <ListItem
                             className="flex items-center gap-2 py-2 pr-4 font-bold hover:bg-transparent hover:text-white text-white "
-                            selected={isMenuOpen || isMobileMenuOpen}
+                            // selected={isMenuOpen || isMobileMenuOpen}
                             onClick={() => setIsMobileMenuOpen((cur) => !cur)}
                         >
                             Resources
@@ -143,7 +153,7 @@ function NavListMenu() {
                     </Typography>
                 </MenuHandler>
                 <MenuList className="hidden max-w-screen-xl rounded-xl lg:block bg-[#18181B]">
-                    <ul className="grid grid-cols-3 gap-y-2 outline-none outline-0 ">
+                    <ul className="grid grid-cols-2 gap-y-2 outline-none outline-0 ">
                         {renderItems}
                     </ul>
                 </MenuList>
@@ -176,7 +186,7 @@ function NavList() {
             <NavListMenu />
             <Typography
                 as="a"
-                href="#"
+                // href="#"
                 variant="small"
                 color="white"
                 className="font-medium"

@@ -1,5 +1,6 @@
 // import React from 'react';
 
+// import { FooterWithLogo } from "./Footer";
 import Hero from "./Hero";
 import MainHome from "./MainHome";
 
@@ -11,6 +12,7 @@ const Home = () => {
             <MainHome />
             <Hero></Hero>
             <Calendermain></Calendermain>
+            {/* <FooterWithLogo /> */}
 
         </div>
 

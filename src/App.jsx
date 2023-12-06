@@ -4,6 +4,9 @@ import Home from "./component/Home";
 import { NavbarWithMegaMenu } from "./component/NavListMenu"
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Notfound from "./component/Notfound";
+import Alquran from "./component/Alquran/Alquran";
+import { FooterWithLogo } from './component/Footer';
+import Sura from "./component/Alquran/Sura";
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -19,9 +22,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/alquran" element={<Alquran />} />
+        <Route path="/alquran/:sura/:id/:arabi" element={<Sura />} />
         <Route path="*" element={<Notfound />} />
       </Routes>
-
+      <FooterWithLogo />
       {/* <Route path="/home" element={<Home />} />
           <Route path="/login" element={<LogIn />} />
           <Route path="/contect" element={<Contect />} />

@@ -25,10 +25,11 @@ const MainHome = () => {
                 {/* <Link hrefLang=www.google.com> */}
 
                 {/* </Link> */}
-                <Link to="https://github.com/tntanvir/muslimpro" target='__blank'><Button className="bg-[#1d4ed8] flex justify-center items-center gap-2" size="sm">
+                <Link to="https://github.com/tntanvir/muslimpro" target='__blank'><Button className="bg-[#1d4ed8] flex justify-center items-center gap-2 hover:shadow-[#1d4ed8] duration-700" size="sm">
                     <IoLogoGithub className='text-2xl' />
                     github
                 </Button></Link>
+                {/* shadow-[0px_6px_126px_0px_#1d4ed8] */}
 
             </div>
         </div>

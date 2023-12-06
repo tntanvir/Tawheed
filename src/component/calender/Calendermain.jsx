@@ -105,20 +105,20 @@ const Calendermain = () => {
 
     return (
         <div className="h-fit min-h-screen md:mx-10">
-            <div className="h-fit bg-white mt-10 md:p-10 p-3 md:rounded-md">
+            <div className="h-fit bg-white  mt-10 md:p-10 p-3 md:rounded-md">
 
                 <h1 className='text-2xl font-semibold'>Salat Timetable</h1>
                 <div className="flex flex-col justify-center mt-4 items-center">
 
                     <div>
-                        <ButtonGroup variant="outlined">
+                        <ButtonGroup variant="outlined" >
                             <Button onClick={month}>Monthly</Button>
                             <Button onClick={years} disabled>Yearly</Button>
                         </ButtonGroup>
                     </div>
                     <div>
                         {
-                            bool && <div className='flex justify-center items-center mt-4 gap-4'>
+                            bool && <div className='flex justify-center items-center mt-4 gap-4 '>
                                 <Select label="Select Year" onChange={selectYear} required>
                                     {
                                         year.map((e) => <Option value={e.id} key={e.id}>{e.id} </Option>)
