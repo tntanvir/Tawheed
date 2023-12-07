@@ -9,8 +9,6 @@ import {
     DialogHeader,
     DialogBody,
     DialogFooter,
-    Input,
-    Textarea,
     Option,
 } from "@material-tailwind/react";
 import { Typography } from "@material-tailwind/react";
