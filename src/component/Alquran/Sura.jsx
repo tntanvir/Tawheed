@@ -1,9 +1,10 @@
-import React from 'react';
+
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { FaCopy } from "react-icons/fa";
 import { Spinner } from '@material-tailwind/react';
+import MusicPlayer from './MusicPlayer';
 
 
 const Sura = () => {
@@ -42,11 +43,12 @@ const Sura = () => {
                         </div>
                         <div className=' gap-7 flex flex-col p-4'>
                             {
-                                sura.ayahs && sura.ayahs.map(({ text, numberInSurah }) => (
+                                sura.ayahs && sura.ayahs.map(({ text, numberInSurah, audio }) => (
                                     <div key={numberInSurah} className='bg-[#27272a] rounded-md py-5 px-2 min-h-[10rem]  md:flex justify-between cursor-pointer '>
                                         <div className='flex items-center md:flex-col w-16 xs:bg-red-900 pb-6 gap-5'>
                                             <h1>{numberInSurah}</h1>
                                             <h1 className='hover:text-[#1d4ed8] duration-150' onClick={() => copyToClipboard(text)}><FaCopy /></h1>
+                                            <MusicPlayer songs={audio} />
                                         </div>
                                         <div className='pr-5 md:w-11/12'>
                                             <h1 className='text-end text-4xl  duration-300'>{text}</h1>
