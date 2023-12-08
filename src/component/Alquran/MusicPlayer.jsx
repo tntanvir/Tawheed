@@ -37,7 +37,10 @@ const MusicPlayer = ({ songs }) => {
         ref={audioRef}
         src={songs}
       ></audio>
-      <div className="controls">
+      <div className="flex justify-center items-center">
+        {/* {
+          console.log(songs)
+        } */}
         <button onClick={playPauseHandler}>
           {isPlaying ? <FaPause /> : <FaPlay />}
         </button>

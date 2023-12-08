@@ -1,3 +1,4 @@
+import { Spinner } from '@material-tailwind/react';
 import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react'
@@ -33,7 +34,9 @@ const Alquran = () => {
                                 </div>
                             </div>
                         </Link>
-                    )) : <div></div>
+                    )) : <div className='text-9xl flex justify-center items-center h-screen'>
+                        <Spinner className="h-36 w-36" color="blue" />
+                    </div>
 
                 }
 
