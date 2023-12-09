@@ -153,16 +153,16 @@ const Calendermain = () => {
                             <Button variant='gradient' onClick={ganarate}>Ganarate</Button>
                             {clgdata && <Button variant='gradient' onClick={downloadPdf}>download</Button>}
                         </div>
-                        <div className='flex justify-center items-center'>
+                        <div className='flex justify-center items-center mb-3'>
 
-                            {clgdata && <Button color='green' size='sm' className='w-fit' onClick={() => setShow(!show)}>{show ? "hidden" : "show"}</Button>}
+                            {clgdata && <Button color='green' size='sm' className='w-fit text-white' onClick={() => setShow(!show)}>{show ? "hidden" : "show"}</Button>}
                         </div>
                     </div>
 
                 </div>
-                <div className={`pt-3 overflow-scroll md:overflow-hidden ${show ? "block" : "hidden"}`} >
+                <div className={`pt-3 bg-white rounded-md  overflow-scroll md:overflow-hidden ${show ? "block" : "hidden"}`} >
                     {
-                        clgdata && <div ref={contentRef} className='bg-white text-black rounded-md p-1 pt-12'>
+                        clgdata && <div ref={contentRef} className='bg-white text-black  p-1 pt-12'>
                             <h1 className='text-center text-2xl'>Salat Timetable</h1>
                             <h1 className='text-center text-4xl'>{localStorage.getItem('sTime')}</h1>
                             <h1 className='text-center text-2xl'>{yer}/{mont}</h1>
