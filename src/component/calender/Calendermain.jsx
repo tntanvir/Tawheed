@@ -101,25 +101,29 @@ const Calendermain = () => {
             html2pdf(content);
         }
     };
-
+    const [show, setShow] = useState(false);
 
     return (
-        <div className="h-fit min-h-screen md:mx-10">
-            <div className="h-fit bg-white  mt-10 md:p-10 p-3 md:rounded-md">
+        <div className=" min-h-screen md:px-5 ">
+            <div className="h-fit bg-[#27272a] text-white  mt-10 md:p-10 p-3 md:rounded-md">
 
                 <h1 className='text-2xl font-semibold'>Salat Timetable</h1>
                 <div className="flex flex-col justify-center mt-4 items-center">
 
                     <div>
-                        <ButtonGroup variant="outlined" >
-                            <Button onClick={month}>Monthly</Button>
-                            <Button onClick={years} disabled>Yearly</Button>
+                        {/* <ButtonGroup variant="outlined" className='border-white border'>
+                            <Button onClick={month} className='text-white'>Monthly</Button>
+                            <Button onClick={years} disabled className='text-white'>Yearly</Button>
+                        </ButtonGroup> */}
+                        <ButtonGroup color="blue">
+                            <Button onClick={month} className='text-white'>Monthly</Button>
+                            <Button onClick={years} className='text-white'>Yearly</Button>
                         </ButtonGroup>
                     </div>
-                    <div>
+                    <div className='flex flex-col justify-cente gap-2'>
                         {
-                            bool && <div className='flex justify-center items-center mt-4 gap-4 '>
-                                <Select label="Select Year" onChange={selectYear} required>
+                            bool && <div className='flex flex-col md:flex-row justify-center items-center mt-4 gap-4 '>
+                                <Select label="Select Year" onChange={selectYear} required color="blue">
                                     {
                                         year.map((e) => <Option value={e.id} key={e.id}>{e.id} </Option>)
                                     }
@@ -149,12 +153,16 @@ const Calendermain = () => {
                             <Button variant='gradient' onClick={ganarate}>Ganarate</Button>
                             {clgdata && <Button variant='gradient' onClick={downloadPdf}>download</Button>}
                         </div>
+                        <div className='flex justify-center items-center'>
+
+                            {clgdata && <Button color='green' size='sm' className='w-fit' onClick={() => setShow(!show)}>{show ? "hidden" : "show"}</Button>}
+                        </div>
                     </div>
 
                 </div>
-                <div className='pt-3 overflow-scroll md:overflow-hidden' >
+                <div className={`pt-3 overflow-scroll md:overflow-hidden ${show ? "block" : "hidden"}`} >
                     {
-                        clgdata && <div ref={contentRef}>
+                        clgdata && <div ref={contentRef} className='bg-white text-black rounded-md p-1 pt-12'>
                             <h1 className='text-center text-2xl'>Salat Timetable</h1>
                             <h1 className='text-center text-4xl'>{localStorage.getItem('sTime')}</h1>
                             <h1 className='text-center text-2xl'>{yer}/{mont}</h1>

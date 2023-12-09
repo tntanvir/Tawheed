@@ -17,7 +17,7 @@ const Alquran = () => {
                 {
                     data ? data.map((e) => (
                         <Link key={e.number} to={`${e.englishName}/${e.number}/${e.name}`}>
-                            <div className='flex text-white w-[22rem] lg:w-96 p-3 gap-3 bg-[#27272a] hover:bg-[#323232] rounded-md justify-between items-center cursor-pointer hover:scale-105 duration-200'>
+                            <div className='flex text-white w-[22rem] lg:w-96 p-3 gap-3 bg-grayr hover:bg-grayh rounded-md justify-between items-center cursor-pointer hover:scale-105 duration-200'>
                                 <div className='flex items-center justify-between gap-2'>
                                     <div className='flex justify-center items-center w-11 h-11 p-1 rounded-full border-2'>
                                         <h1 className='text-2xl'>{e.number}</h1>
