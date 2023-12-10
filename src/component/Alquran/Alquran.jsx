@@ -11,8 +11,8 @@ const Alquran = () => {
             .then(ok => setData(ok.data))
     }, [])
     return (
-        <div className=''>
-            <div className='flex p-2 flex-wrap gap-2 justify-around '>
+        <div className='min-h-screen'>
+            <div className='flex p-2 flex-wrap gap-2 justify-around min-h-screen'>
 
                 {
                     data ? data.map((e) => (
