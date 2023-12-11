@@ -11,6 +11,7 @@ import { FaAnglesUp } from "react-icons/fa6";
 import { IoMdCloseCircle } from "react-icons/io";
 import { Link } from 'react-router-dom';
 import { Tabs } from '@material-tailwind/react';
+
 const Sura = () => {
     const { id } = useParams()
     const [sura, Setsura] = useState();
@@ -123,15 +124,18 @@ const Sura = () => {
                             </div>
                         </div>
                         <div className=' flex flex-col gap-7 justify-center mt-3 items-center'>
-                            <div className={`flex justify-center items-center bg-[#2e2e40] gap-5 p-0 rounded-md fixed mt-[46rem] w-[90vw] ${show ? "block" : "hidden"} transition duration-1000`}>
+
+                            <div className={`h-fit flex justify-center items-center bg-[#2e2e40] gap-5 p-0 rounded-md fixed mt-[55rem] md:mt-[47rem] w-[90vw] ${show ? "block" : "hidden"} transition duration-1000`}>
 
                                 {
+
                                     activeTab == "Arabi" && <AudioPlayer audioUrl={`https://download.quranicaudio.com/qdc/mishari_al_afasy/murattal/${sura.number}.mp3`} num={1} />
+
 
                                 }
                                 {
-                                    activeTab == "Bangla" && <AudioPlayer audioUrl={`https://ia902908.us.archive.org/20/items/bdquran/${formatNumber(sura.number)}.mp3`} num={1} />
-                                    // activeTab == "Bangla" && <AudioPlayer audioUrl={`https://www.truemuslims.net/Quran/Bangla/${formatNumber(sura.number)}.mp3`} num={2} />
+
+                                    activeTab == "Bangla" && <AudioPlayer audioUrl={`https://www.truemuslims.net/Quran/Bangla/${formatNumber(sura.number)}.mp3`} num={2} />
 
                                 }
                                 {
@@ -141,7 +145,7 @@ const Sura = () => {
 
                                 }
                                 {/* {console.log(formatNumber(sura.number))} */}
-                                <div className='cursor-pointer hover:text-[#1d4ed9] absolute right-2 md:top-1 text-2xl duration-500'>
+                                <div className='cursor-pointer hover:text-[#1d4ed9] absolute right-2 top-1 text-2xl duration-500'>
                                     <IoMdCloseCircle onClick={() => setShow(!show)} />
                                 </div>
                             </div>
