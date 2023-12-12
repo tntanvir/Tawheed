@@ -142,7 +142,9 @@ const AudioPlayer = ({ audioUrl, num }) => {
               </button>
               <TbPlayerTrackNextFilled />
 
-              <Menu>
+              <Menu dismiss={{
+                itemPress: false,
+              }}>
                 <MenuHandler>
                   <IconButton variant="text">
 
@@ -175,7 +177,7 @@ const AudioPlayer = ({ audioUrl, num }) => {
                     </div>
                   </MenuItem>
                   <Menu
-                    placement="right-start"
+                    placement="top-start"
                     open={openMenu}
                     handler={setOpenMenu}
                     allowHover
@@ -191,7 +193,7 @@ const AudioPlayer = ({ audioUrl, num }) => {
                         />
                       </MenuItem>
                     </MenuHandler>
-                    <MenuList>
+                    <MenuList >
                       <MenuItem onClick={() => handleSpeedChange(0.5)}><button className='text-1xl mx-1'>
                         0.5x
                       </button></MenuItem>

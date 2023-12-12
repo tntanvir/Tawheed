@@ -64,7 +64,7 @@ const Sura = () => {
         <div className='text-white  min-h-screen px-4'>
             {
                 sura ?
-                    <div className=''>
+                    <div className='relative'>
                         <div className='text-center'>
                             <h1 className='text-3xl'>{sura.englishName}</h1>
                             <h1 className='text-2xl'>{sura.name}</h1>
@@ -123,9 +123,9 @@ const Sura = () => {
                                 }
                             </div>
                         </div>
-                        <div className=' flex flex-col gap-7 justify-center mt-3 items-center'>
+                        <div className=' flex flex-col gap-7 justify-center mt-3 items-center '>
 
-                            <div className={`h-fit flex justify-center items-center bg-[#2e2e40] gap-5 p-0 rounded-md fixed mt-[55rem] md:mt-[47rem] w-[90vw] ${show ? "block" : "hidden"} transition duration-1000`}>
+                            <div className={`h-fit flex justify-center items-center bg-[#2e2e40] gap-5 p-0 rounded-md fixed bottom-1 w-[90vw] ${show ? "block" : "hidden"} transition duration-1000`}>
 
                                 {
 
