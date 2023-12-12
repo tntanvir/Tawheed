@@ -1,5 +1,4 @@
 
-// import AudioPlayerComponent from "./Alquran/AudioPlayerComponent";
 import Hero from "./Hero";
 import MainHome from "./MainHome";
 
@@ -11,8 +10,8 @@ const Home = () => {
             <MainHome />
             <Hero></Hero>
             <Calendermain></Calendermain>
-            {/* <FooterWithLogo /> */}
-            {/* <AudioPlayerComponent audioUrlProp={`https://download.quranicaudio.com/qdc/mishari_al_afasy/murattal/100.mp3`} /> */}
+
+
 
         </div>
 

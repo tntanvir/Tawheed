@@ -19,13 +19,9 @@ import {
 } from "@heroicons/react/24/outline";
 import {
     Bars4Icon,
-    // GlobeAmericasIcon,
-    // NewspaperIcon,
+
     PhoneIcon,
-    // RectangleGroupIcon,
-    // SquaresPlusIcon,
-    // SunIcon,
-    // TagIcon,
+
     UserGroupIcon,
 } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
@@ -51,37 +47,14 @@ const navListMenuItems = [
         link: "/blog",
 
     },
-    // {
-    //     title: "Services",
-    //     description: "Learn how we can help you achieve your goals.",
-    //     icon: SunIcon,
-    // },
-    // {
-    //     title: "Support",
-    //     description: "Reach out to us for assistance or inquiries",
-    //     icon: GlobeAmericasIcon,
-    // },
+
     {
         title: "Contact",
         description: "Find the perfect solution for your needs.",
         icon: PhoneIcon,
         link: "/contact",
     },
-    // {
-    //     title: "News",
-    //     description: "Read insightful articles, tips, and expert opinions.",
-    //     icon: NewspaperIcon,
-    // },
-    // {
-    //     title: "Products",
-    //     description: "Find the perfect solution for your needs.",
-    //     icon: RectangleGroupIcon,
-    // },
-    // {
-    //     title: "Special Offers",
-    //     description: "Explore limited-time deals and bundles",
-    //     icon: TagIcon,
-    // },
+
 ];
 
 function NavListMenu() {
@@ -261,7 +234,7 @@ export function NavbarWithMegaMenu() {
                     )}
                 </IconButton>
             </div>
-            <Collapse open={openNav}>
+            <Collapse open={openNav} onClick={() => setOpenNav(!openNav)}>
                 <NavList />
                 <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
                     <Button variant="outlined" size="sm" color="blue-gray" fullWidth>

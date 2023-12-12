@@ -54,7 +54,7 @@ const Sura = () => {
             return `${number}`;
         }
     };
-    // const [open, setOpen] = useState(false);
+
     const [show, setShow] = useState(true);
     // _________________________________________________
     const [activeTab, setActiveTab] = useState("Arabi");
@@ -155,7 +155,7 @@ const Sura = () => {
                         {/* {console.log(show)} */}
                         <div className=' gap-7 flex flex-col md:p-4'>
                             {
-                                activeTab == "Arabi" && sura.ayahs ? sura.ayahs.map(({ text, numberInSurah, audio }) => (
+                                activeTab == "Arabi" && sura.ayahs && sura.ayahs.map(({ text, numberInSurah, audio }) => (
                                     <div key={numberInSurah} className='bg-[#27272a] rounded-md py-5 md:px-2  min-h-[10rem]  md:flex justify-between cursor-pointer '>
                                         <div className='flex items-center md:flex-col w-16 xs:bg-red-900 pb-6 gap-5'>
                                             <div className='flex justify-center items-center w-11 h-11 p-1 rounded-full border-2'>
@@ -170,14 +170,11 @@ const Sura = () => {
                                         </div>
                                     </div>
                                 ))
-                                    :
-                                    <div className='text-9xl flex justify-center items-center'>
-                                        {/* <Spinner className="h-36 w-36" color="blue" /> */}
-                                    </div>
+
 
                             }
                             {
-                                activeTab == "Bangla" && bangla ? bangla.map(({ text, id, translation }) => (
+                                activeTab == "Bangla" && bangla && bangla.map(({ text, id, translation }) => (
                                     <div key={id} className='bg-[#27272a] rounded-md py-5 md:px-2  min-h-[10rem]  md:flex justify-between cursor-pointer '>
                                         <div className='flex items-center md:flex-col w-16 xs:bg-red-900 pb-6 gap-5'>
                                             <div className='flex justify-center items-center w-11 h-11 p-1 rounded-full border-2'>
@@ -194,13 +191,10 @@ const Sura = () => {
                                     </div>
                                     // console.log(e)
                                 ))
-                                    :
-                                    <div className='text-9xl flex justify-center items-center'>
-                                        {/* <Spinner className="h-36 w-36" color="blue" /> */}
-                                    </div>
+
                             }
                             {
-                                activeTab == "English" && english ? english.map(({ text, id, translation }) => (
+                                activeTab == "English" && english && english.map(({ text, id, translation }) => (
                                     <div key={id} className='bg-[#27272a] rounded-md py-5 md:px-2  min-h-[10rem]  md:flex justify-between cursor-pointer '>
                                         <div className='flex items-center md:flex-col w-16 xs:bg-red-900 pb-6 gap-5'>
                                             <div className='flex justify-center items-center w-11 h-11 p-1 rounded-full border-2'>
@@ -217,10 +211,7 @@ const Sura = () => {
                                     </div>
                                     // console.log(e)
                                 ))
-                                    :
-                                    <div className='text-9xl flex justify-center items-center h-screen'>
-                                        {/* <Spinner className="h-36 w-36" color="blue" /> */}
-                                    </div>
+
                             }
                         </div>
 
