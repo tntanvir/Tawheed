@@ -1,0 +1,30 @@
+[
+    {
+        "language": "Bengali",
+        "name": "ben-"
+    },
+    {
+        "language": "English",
+        "name": "eng-"
+    },
+    {
+        "language": "Indonesian",
+        "name": "ind-"
+    },
+    {
+        "language": "Arabic",
+        "name": "ara-"
+    },
+    {
+        "language": "Russian",
+        "name": "rus-"
+    },
+    {
+        "language": "Turkish",
+        "name": "tru-"
+    },
+    {
+        "language": "Urdu",
+        "name": "urd-"
+    }
+]

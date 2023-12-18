@@ -6,7 +6,6 @@ import { TypeAnimation } from 'react-type-animation';
 const MainHome = () => {
     return (
         <div className='h-screen flex justify-center items-center flex-col max-w-2xl m-auto text-center text-white '>
-            <div className='absolute w-24 h-24 rounded-full filter blur-[85px] opacity-1 left-0 bottom-80 animate-pulse  duration-1000 -z-10 bg-[#1d4ed8]'></div>
             <TypeAnimation
                 sequence={[
                     'Muslim Pro',

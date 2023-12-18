@@ -7,6 +7,9 @@ import Notfound from "./component/Notfound";
 import Alquran from "./component/Alquran/Alquran";
 import { FooterWithLogo } from './component/Footer';
 import Sura from "./component/Alquran/Sura";
+import MainHadis from "./component/Hadis/MainHadis";
+import HadisAllbook from "./component/Hadis/HadisAllbook";
+import HadisSection from "./component/Hadis/HadisSection";
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -24,6 +27,9 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/alquran" element={<Alquran />} />
         <Route path="/alquran/:sura/:id/:arabi" element={<Sura />} />
+        <Route path="/hadis" element={<MainHadis />} />
+        <Route path="/hadis/:id/:name" element={<HadisAllbook />} />
+        <Route path="/hadis/:id/:name/section-hadis/:key" element={<HadisSection />} />
         <Route path="*" element={<Notfound />} />
       </Routes>
       <FooterWithLogo />

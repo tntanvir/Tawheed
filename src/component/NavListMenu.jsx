@@ -34,10 +34,10 @@ const navListMenuItems = [
         link: "/alquran",
     },
     {
-        title: "About Us",
-        description: "Meet and learn about our dedication",
-        icon: UserGroupIcon,
-        link: "/aboutus",
+        title: "Hadis",
+        description: "Find the perfect solution for your needs.",
+        icon: GiBookmarklet,
+        link: "/hadis",
 
     },
     {
