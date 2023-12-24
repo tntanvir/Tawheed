@@ -96,7 +96,7 @@ const HadisSection = () => {
                                             {/* <MusicPlayer songs={audio} /> */}
                                         </div>
                                         <div className='p-3 md:w-11/12'>
-                                            <h1 className={`${sortlg == "ara-" ? "text-end" : "text-start"} text-4xl  duration-300`}>{e.text}</h1>
+                                            <h1 className={`${sortlg === "ara-" ? "text-end" : "text-start"} text-4xl  duration-300`}>{e.text}</h1>
                                         </div>
                                     </div>
                                 ))

@@ -207,7 +207,7 @@ export function NavbarWithMegaMenu() {
                     className="mr-4 cursor-pointer py-1.5 lg:ml-2"
                 >
                     <Link to="/" className="flex items-center">
-                        Muslim Pro
+                        TAWHID
                     </Link>
                 </Typography>
                 <div className="hidden lg:block">

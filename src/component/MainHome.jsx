@@ -8,12 +8,12 @@ const MainHome = () => {
         <div className='h-screen flex justify-center items-center flex-col max-w-2xl m-auto text-center text-white '>
             <TypeAnimation
                 sequence={[
-                    'Muslim Pro',
+                    'TAWHID',
                     1000,
                 ]}
-                speed={25}
+                speed={15}
 
-                className='text-6xl text-white font-bold text-center'
+                className='text-7xl text-white font-bold text-center tracking-[0.2rem] md:tracking-[0.4rem]'
                 repeat={1}
                 cursor={false}
             />
