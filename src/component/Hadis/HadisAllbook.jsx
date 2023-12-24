@@ -62,11 +62,11 @@ const HadisAllbook = () => {
                                     </div>
 
                                 </div>
-                                <div className='text-end'>
-                                    <h1 >{section[key].hadithnumber_first} - {section[key].hadithnumber_last}</h1>
+                                <div className='text-end flex md:flex-col-reverse justify-between'>
                                     {
                                         last == key ? <h1 className='text-blueo font-poppins font-semibold'>Last Read</h1> : <h1></h1>
                                     }
+                                    <h1>{section[key].hadithnumber_first} - {section[key].hadithnumber_last}</h1>
                                 </div>
                             </div>
                         </Link>

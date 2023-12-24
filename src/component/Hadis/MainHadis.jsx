@@ -31,11 +31,10 @@ const MainHadis = () => {
 
                                     <div >
                                         <h1 className='text-2xl'>{e.name}</h1>
-                                        {/* <h1 className=''>{e.englishNameTranslation}</h1> */}
+
                                     </div>
                                 </div>
                                 <div>
-                                    {/* <h1 className='text-2xl'>{e.name}</h1> */}
                                     {
                                         last == e.id ? <h1 className='text-blueo font-poppins font-semibold'>Last Read</h1> : <h1></h1>
                                     }
