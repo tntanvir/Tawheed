@@ -24,7 +24,7 @@ const Alquran = () => {
     }, [])
 
     return (
-        <div className='min-h-screen'>
+        <div className='min-h-screen flex flex-col items-center '>
 
             <div className='flex p-2 flex-wrap gap-2 justify-around min-h-screen'>
 
@@ -39,13 +39,14 @@ const Alquran = () => {
 
                                     <div >
                                         <h1 className='text-2xl'>{e.englishName}</h1>
-                                        <h1 className=''>{e.englishNameTranslation}</h1>
+
+                                        <p className='text-[15px]'>{e.englishNameTranslation}</p>
                                     </div>
                                 </div>
                                 <div>
                                     <h1 className='text-2xl'>{e.name}</h1>
                                     {
-                                        last == e.number ? <h1 className='text-blueo font-poppins font-semibold'>Last Read</h1> : <h1></h1>
+                                        last == e.number ? <h1 className='text-blueo font-poppins font-semibold text-end'>Last Read</h1  > : <h1 className='text-end font-poppins'>{e.numberOfAyahs} Ayah</h1>
                                     }
                                 </div>
                             </div>

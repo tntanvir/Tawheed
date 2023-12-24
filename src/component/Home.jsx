@@ -11,10 +11,6 @@ const Home = () => {
             <MainHome />
             <Hero></Hero>
             <Calendermain></Calendermain>
-
-
-
-
         </div>
 
     );

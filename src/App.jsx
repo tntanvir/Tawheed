@@ -1,5 +1,3 @@
-
-
 import Home from "./component/Home";
 import { NavbarWithMegaMenu } from "./component/NavListMenu"
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
@@ -12,17 +10,13 @@ import HadisAllbook from "./component/Hadis/HadisAllbook";
 import HadisSection from "./component/Hadis/HadisSection";
 
 function App() {
-  // const [count, setCount] = useState(0)
+
 
   return (
-    // <>
-    //   <NavbarWithMegaMenu></NavbarWithMegaMenu>
-    // </>
-    // <ContextApi.Provider value={[userLogin, setUserLogin]}>
     <Router>
       <NavbarWithMegaMenu></NavbarWithMegaMenu>
 
-      <Routes>
+      <Routes >
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/alquran" element={<Alquran />} />
@@ -33,35 +27,8 @@ function App() {
         <Route path="*" element={<Notfound />} />
       </Routes>
       <FooterWithLogo />
-      {/* <Route path="/home" element={<Home />} />
-          <Route path="/login" element={<LogIn />} />
-          <Route path="/contect" element={<Contect />} />
-          <Route path="/docs" element={<Docs />} />
-          <Route path="/provideUser" element={<Getstart />} />
-          <Route
-            path="/userDeshBord"
-            element={
-              <PrivetRoute childern={<UserDeshBord />} />
-            }
-          />
-          <Route
-            path="/donerfrom"
-            element={
-              <PrivetRoute childern={<DonerFrom />} />
-            }
-          />
-          <Route
-            path="/resivedfrom"
-            element={
-              <PrivetRoute childern={<ResivedFrom />} />
-            }
-          />
-          <Route path="*" element={<NotFound />} />
 
-        </Routes>
-        <Footers></Footers> */}
     </Router>
-    // </ContextApi.Provider>
   )
 }
 

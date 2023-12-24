@@ -160,7 +160,7 @@ const Calendermain = () => {
                     </div>
 
                 </div>
-                <div className={`pt-3 bg-white rounded-md  overflow-scroll md:overflow-hidden ${show ? "block" : "hidden"}`} >
+                <div className={`pt-3 bg-white rounded-md  overflow-scroll md:overflow-hidden  ${show ? "block" : "hidden"}`} >
                     {
                         clgdata && <div ref={contentRef} className='bg-white text-black  p-1 pt-12'>
                             <h1 className='text-center text-2xl'>Salat Timetable</h1>
