@@ -154,28 +154,12 @@ const AudioPlayer = ({ audioUrl, num }) => {
                 <MenuList className="flex flex-col gap-2">
 
                   <MenuItem onClick={handleDownload} className='flex justify-between'>
-                    {/* <button  className='text-4xl ml-2'> */}
+
                     <h1>Download</h1>
                     <FaDownload />
-                    {/* </button> */}
+
                   </MenuItem>
-                  <MenuItem>
-                    <div className='cursor-pointer'>
-                      <label htmlFor="volume">Volume:</label>
-                      <input
-                        type="range"
-                        id="volume"
-                        name="volume"
-                        min="0"
-                        max="1"
-                        step="0.01"
-                        value={volume}
-                        onChange={handleVolumeChange}
-                        className='cursor-pointer'
-                      />
-                      <span>{(volume * 100).toFixed(0)}%</span>
-                    </div>
-                  </MenuItem>
+
                   <Menu
                     placement="top-start"
                     open={openMenu}
@@ -208,6 +192,23 @@ const AudioPlayer = ({ audioUrl, num }) => {
                       </button></MenuItem>
                     </MenuList>
                   </Menu>
+                  <MenuItem>
+                    <div className='cursor-pointer'>
+                      <label htmlFor="volume">Volume:</label>
+                      <input
+                        type="range"
+                        id="volume"
+                        name="volume"
+                        min="0"
+                        max="1"
+                        step="0.01"
+                        value={volume}
+                        onChange={handleVolumeChange}
+                        className='cursor-pointer'
+                      />
+                      <span>{(volume * 100).toFixed(0)}%</span>
+                    </div>
+                  </MenuItem>
                 </MenuList>
               </Menu>
             </div>

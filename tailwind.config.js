@@ -13,7 +13,14 @@ module.exports = withMT({
         dimBlue: "rgba(9, 151, 124, 0.1)",
         blueo: "#1d4ed8",
         grayh: "#323232",
-        grayr: "#27272a"
+        grayr: "#27272a",
+        // ------hadis tag-----------
+        // Hasan: "#008000",
+        Daif: "#ff8c00",
+        Sahih: "#008000",
+        Shadh: "#ffb6c1",
+        Munkar: "#ff69b4",
+
 
       },
       fontFamily: {

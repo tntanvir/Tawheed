@@ -116,7 +116,9 @@ const HadisSection = () => {
                                                             <div className='flex justify-between p-2 hover:bg-grayh rounded-md' key={e.name}>
 
                                                                 <h1>{m.name}</h1>
-                                                                <h1>{m.grade}</h1>
+
+                                                                <h1 className={`${m.grade ? `bg-${m.grade} ` : "bg-black"} px-2 rounded-full`}>{m.grade}</h1>
+
                                                             </div>
 
                                                         )
