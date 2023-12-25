@@ -8,7 +8,7 @@ const MainHome = () => {
         <div className='h-screen flex justify-center items-center flex-col max-w-2xl m-auto text-center text-white '>
             <TypeAnimation
                 sequence={[
-                    'TAWHID',
+                    'TAWHEED',
                     1000,
                 ]}
                 speed={15}

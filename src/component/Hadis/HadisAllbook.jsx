@@ -31,10 +31,10 @@ const HadisAllbook = () => {
     const [last, setLast] = useState('');
     const updateNumber = (newNumber) => {
         setLast(newNumber)
-        localStorage.setItem('storedSNumber', newNumber.toString());
+        localStorage.setItem(`storedSNumber-${name}`, newNumber.toString());
     };
     useEffect(() => {
-        let store = localStorage.getItem('storedSNumber');
+        let store = localStorage.getItem(`storedSNumber-${name}`);
         setLast(parseInt(store));
     }, [])
 
