@@ -126,7 +126,9 @@ const HadisSection = () => {
                                                                 <h1 className={`${m.grade == "Daif" ? "bg-Daif" : m.grade == "Hasan" ? "bg-Hasan" : m.grade == "Sahih" ? "bg-Sahih" : m.grade == "Shadh" ?
                                                                     "bg-Shadh" : m.grade == "Munkar" ? "bg-Munkar" : tag(m.grade) == "Daif" ? "bg-Daif" : tag(m.grade) == "Hasan" ? "bg-Hasan" : tag(m.grade) == "Sahih" ? "bg-Sahih" : tag(m.grade) == "Shadh" ?
                                                                         "bg-Shadh" : tag(m.grade) == "Munkar" ? "bg-Munkar" :
-                                                                            "bg-transparent"
+                                                                            m.grade == "Mawdu" ? "bg-Mawdu" :
+                                                                                tag(m.grade) == "Mawdu" ? "bg-Mawdu" : tag(m.grade) == "Lighairihi" ? "bg-gray-700" :
+                                                                                    "bg-transparent"
                                                                     } 
                                                                  px-2 rounded-full`
                                                                 }>{m.grade}</h1>

@@ -14,11 +14,12 @@ module.exports = withMT({
         grayh: "#323232",
         grayr: "#27272a",
         // ------hadis tag-----------
-        Hasan: "#008000",
+        Hasan: "#9fd568",
         Daif: "#ff8c00",
         Sahih: "#008000",
         Shadh: "#ffb6c1",
         Munkar: "#ff69b4",
+        Mawdu: "#ff0000",
 
 
       },
