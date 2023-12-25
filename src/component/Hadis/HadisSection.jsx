@@ -8,7 +8,7 @@ import lenguse from './lenguse.json';
 import { RiArrowDropDownLine } from "react-icons/ri";
 import {
     Accordion,
-    AccordionHeader,
+
     AccordionBody,
 } from "@material-tailwind/react";
 const HadisSection = () => {
@@ -52,6 +52,12 @@ const HadisSection = () => {
     const [open, setOpen] = useState(0);
 
     const handleOpen = (value) => setOpen(open === value ? 0 : value);
+
+    // hadis_tag
+    const tag = (data) => {
+        const [fast, last] = data.split(' ');
+        return last;
+    }
 
     return (
         <div className='min-h-screen text-white '>
@@ -117,7 +123,13 @@ const HadisSection = () => {
 
                                                                 <h1>{m.name}</h1>
 
-                                                                <h1 className={`${m.grade ? `bg-${m.grade} ` : "bg-black"} px-2 rounded-full`}>{m.grade}</h1>
+                                                                <h1 className={`${m.grade == "Daif" ? "bg-Daif" : m.grade == "Hasan" ? "bg-Hasan" : m.grade == "Sahih" ? "bg-Sahih" : m.grade == "Shadh" ?
+                                                                    "bg-Shadh" : m.grade == "Munkar" ? "bg-Munkar" : tag(m.grade) == "Daif" ? "bg-Daif" : tag(m.grade) == "Hasan" ? "bg-Hasan" : tag(m.grade) == "Sahih" ? "bg-Sahih" : tag(m.grade) == "Shadh" ?
+                                                                        "bg-Shadh" : tag(m.grade) == "Munkar" ? "bg-Munkar" :
+                                                                            "bg-transparent"
+                                                                    } 
+                                                                 px-2 rounded-full`
+                                                                }>{m.grade}</h1>
 
                                                             </div>
 

@@ -3,7 +3,6 @@ const withMT = require("@material-tailwind/react/utils/withMT");
 module.exports = withMT({
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
 
-  mode: "jit",
   theme: {
     extend: {
       colors: {
@@ -15,7 +14,7 @@ module.exports = withMT({
         grayh: "#323232",
         grayr: "#27272a",
         // ------hadis tag-----------
-        // Hasan: "#008000",
+        Hasan: "#008000",
         Daif: "#ff8c00",
         Sahih: "#008000",
         Shadh: "#ffb6c1",
