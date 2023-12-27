@@ -135,7 +135,7 @@ const Sura = () => {
                                 }
                                 {
 
-                                    activeTab == "Bangla" && <AudioPlayer audioUrl={`https://www.truemuslims.net/Quran/Bangla/${formatNumber(sura.number)}.mp3`} num={2} />
+                                    activeTab == "Bangla" && <AudioPlayer audioUrl={`https://www.truemuslims.net/Quran/Bangla/${formatNumber(sura.number)}.mp3`} num={1} />
 
                                 }
                                 {
