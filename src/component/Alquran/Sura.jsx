@@ -18,19 +18,29 @@ const Sura = () => {
     useEffect(() => {
         fetch(`https://api.alquran.cloud/v1/surah/${id}/ar.alafasy`)
             .then(res => res.json())
-            .then(ok => Setsura(ok.data));
+            .then(ok => Setsura(ok.data))
+            .catch(error => {
+                throw (error);
+            })
+
     }, [id])
     const [bangla, setBangla] = useState();
     useEffect(() => {
         fetch(`https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/bn/${id}.json`)
             .then(res => res.json())
-            .then(ok => setBangla(ok.verses));
+            .then(ok => setBangla(ok.verses))
+            .catch(error => {
+                throw (error);
+            })
     }, [id])
     const [english, setEnlish] = useState();
     useEffect(() => {
         fetch(`https://cdn.jsdelivr.net/npm/quran-json@3.1.2/dist/chapters/en/${id}.json`)
             .then(res => res.json())
-            .then(ok => setEnlish(ok.verses));
+            .then(ok => setEnlish(ok.verses))
+            .catch(error => {
+                throw (error);
+            })
     }, [id])
 
     const [isCopied, setIsCopied] = useState(false);

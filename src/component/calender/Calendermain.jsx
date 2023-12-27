@@ -74,6 +74,9 @@ const Calendermain = () => {
             fetch(`https://api.aladhan.com/v1/calendarByAddress/${yer}/${mont}?address=${localStorage.getItem('sTime')}`)
                 .then(res => res.json())
                 .then(data => setClgdata(data.data))
+                .catch(error => {
+                    throw (error);
+                })
             // console.log(clgdata);
 
 

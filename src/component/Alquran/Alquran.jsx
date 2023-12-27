@@ -9,6 +9,9 @@ const Alquran = () => {
         fetch("https://api.alquran.cloud/v1/surah")
             .then(res => res.json())
             .then(ok => setData(ok.data))
+            .catch(error => {
+                throw (error);
+            })
     }, [])
 
     // store

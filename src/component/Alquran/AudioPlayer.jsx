@@ -25,7 +25,7 @@ const AudioPlayer = ({ audioUrl, num }) => {
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [playbackSpeed, setPlaybackSpeed] = useState(1); // New state for playback speed
+  const [playbackSpeed, setPlaybackSpeed] = useState(1);
   const audioRef = useRef(null);
 
   useEffect(() => {
@@ -103,7 +103,7 @@ const AudioPlayer = ({ audioUrl, num }) => {
       document.body.appendChild(link);
       link.click();
 
-      // Clean up the DOM after download
+
       document.body.removeChild(link);
       window.URL.revokeObjectURL(url);
     } catch (error) {

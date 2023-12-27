@@ -214,7 +214,7 @@ export function NavbarWithMegaMenu() {
                     <NavList />
                 </div>
                 <div className="hidden gap-3 lg:flex">
-                    <Button variant="outline" className="bg-transparent text-white shadow-none border border-transparent hover:shadow-none hover:border-[#1d4ed8] " size="sm" color="white">
+                    <Button variant="outlined" className="bg-transparent text-white shadow-none border border-transparent hover:shadow-none hover:border-[#1d4ed8] " size="sm" color="white">
                         Log In
                     </Button>
                     <Button className="bg-[#1d4ed8]" size="sm">
