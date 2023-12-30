@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom';
 
 const Alquran = () => {
-    const [data, setData] = useState([]);
+    const [data, setData] = useState();
     useEffect(() => {
         fetch("https://api.alquran.cloud/v1/surah")
             .then(res => res.json())

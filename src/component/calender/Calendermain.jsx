@@ -1,4 +1,4 @@
-// import React from 'react';
+
 
 import { ButtonGroup } from '@material-tailwind/react';
 import { Select, Option } from "@material-tailwind/react";
@@ -11,8 +11,9 @@ import { useState } from 'react';
 import { Typography } from '@material-tailwind/react';
 
 // -------------
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import html2pdf from 'html2pdf.js';
+import { useEffect } from 'react';
 
 const Calendermain = () => {
     const [vlu, setVlu] = useState(2);
@@ -42,24 +43,24 @@ const Calendermain = () => {
 
 
     }
-    const years = () => {
-        setVlu(1);
-        // --------------------month
-        if (bool == true) {
-            setBool(false);
-        } else {
-            setBool(false);
-        }
-        // ------------yeaar
+    // const years = () => {
+    //     setVlu(1);
+    //     // --------------------month
+    //     if (bool == true) {
+    //         setBool(false);
+    //     } else {
+    //         setBool(false);
+    //     }
+    //     // ------------yeaar
 
-        if (bool2 == false) {
-            setBool2(true);
-        } else {
-            setBool2(true);
-        }
+    //     if (bool2 == false) {
+    //         setBool2(true);
+    //     } else {
+    //         setBool2(true);
+    //     }
 
 
-    }
+    // }
 
     const selectYear = (e) => {
         setYer(e);
@@ -67,11 +68,17 @@ const Calendermain = () => {
     const selectMonth = (e) => {
         setMont(e);
     }
+    const [area, setArea] = useState();
+    useEffect(() => {
+        setArea(localStorage.getItem('sTime') ? localStorage.getItem('sTime') : "Dhaka");
+    }, [])
+
     const [clgdata, setClgdata] = useState(null);
     const ganarate = () => {
+        setArea(localStorage.getItem('sTime') ? localStorage.getItem('sTime') : "Dhaka");
         if (vlu == 2) {
             // console.log(yer, mont);
-            fetch(`https://api.aladhan.com/v1/calendarByAddress/${yer}/${mont}?address=${localStorage.getItem('sTime')}`)
+            fetch(`https://api.aladhan.com/v1/calendarByAddress/${yer}/${mont}?address=${area}`)
                 .then(res => res.json())
                 .then(data => setClgdata(data.data))
                 .catch(error => {
@@ -132,7 +139,7 @@ const Calendermain = () => {
                                     }
 
                                 </Select>
-                                <Select label="Select Month" onChange={selectMonth} required>
+                                <Select label="Select Month" onChange={selectMonth} required color="blue">
                                     {
                                         months.map((e) => <Option value={e.id} key={e.name}>{e.name} </Option>)
                                     }
@@ -167,7 +174,7 @@ const Calendermain = () => {
                     {
                         clgdata && <div ref={contentRef} className='bg-white text-black  p-1 pt-12'>
                             <h1 className='text-center text-2xl'>Salat Timetable</h1>
-                            <h1 className='text-center text-4xl'>{localStorage.getItem('sTime')}</h1>
+                            <h1 className='text-center text-4xl'>{area}</h1>
                             <h1 className='text-center text-2xl'>{yer}/{mont}</h1>
                             <table className="w-full min-w-max table-auto text-left border border-gray-500 mt-4">
                                 {/* {console.log(e.date.readable)} */}
