@@ -5,8 +5,8 @@ const manifestForPlugIn = {
   registerType: 'prompt',
   includeAssests: ['favicon.ico', "apple-touc-icon.png", "masked-icon.svg"],
   manifest: {
-    name: "React-vite-app",
-    short_name: "react-vite-app",
+    name: "TAWHEED",
+    short_name: "taw-heed",
     description: "I am a simple vite app",
     icons: [{
       src: '/android-chrome-192x192.png',
