@@ -27,7 +27,7 @@ const manifestForPlugIn = {
       purpose: 'apple touch icon',
     },
     {
-      src: '/maskable_icon.png',
+      src: '/public/android-chrome-512x512.png',
       sizes: '512x512',
       type: 'image/png',
       purpose: 'any maskable',
