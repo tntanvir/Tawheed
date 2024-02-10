@@ -1,8 +1,9 @@
-
-// import { useEffect } from "react";
 import Hero from "./Hero";
 import MainHome from "./MainHome";
 import Calendermain from "./calender/Calendermain";
+
+
+
 
 const Home = () => {
 
