@@ -6,3 +6,19 @@
 body {
     @apply box-border bg-[#18181B]
 }
+
+:root {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 0.4rem;
+    /* background: #1d4ed8; */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #1d4ed8;
+    border-radius: 20px;
+
+
+}
