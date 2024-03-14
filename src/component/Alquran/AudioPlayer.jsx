@@ -1,5 +1,5 @@
 import { FaPauseCircle, FaPlayCircle, FaDownload } from 'react-icons/fa';
-import { MenuHandler, Spinner } from '@material-tailwind/react';
+import { MenuHandler, Spinner, Tooltip } from '@material-tailwind/react';
 import React, { useState, useRef, useEffect } from 'react';
 import axios from 'axios';
 import { TbPlayerTrackNextFilled, TbPlayerTrackPrevFilled } from "react-icons/tb";
@@ -12,9 +12,6 @@ import {
   MenuList,
   MenuItem,
   IconButton,
-
-
-
 } from "@material-tailwind/react";
 import { IoChevronUpCircleOutline } from 'react-icons/io5';
 
@@ -28,8 +25,14 @@ const AudioPlayer = ({ audioUrl, num }) => {
   const [playbackSpeed, setPlaybackSpeed] = useState(1);
   const audioRef = useRef(null);
 
+  const [loop, setLoop] = useState(false);
+  const repeat = () => {
+    setLoop(!loop);
+  }
+
   useEffect(() => {
     const audio = audioRef.current;
+    const initialLoopValue = loop;
 
     const handleTimeUpdate = () => {
       setCurrentTime(audio.currentTime);
@@ -41,7 +44,12 @@ const AudioPlayer = ({ audioUrl, num }) => {
 
     const handleEnded = () => {
       setCurrentTime(0);
-      setIsPlaying(false);
+      audio.currentTime = 0;
+      if (initialLoopValue) {
+        audio.play();
+      } else {
+        setIsPlaying(false);
+      }
     };
 
     audio.addEventListener('timeupdate', handleTimeUpdate);
@@ -53,7 +61,8 @@ const AudioPlayer = ({ audioUrl, num }) => {
       audio.removeEventListener('loadedmetadata', handleLoadedMetadata);
       audio.removeEventListener('ended', handleEnded);
     };
-  }, []);
+  }, [loop]);
+
 
   const handleVolumeChange = (e) => {
     const newVolume = parseFloat(e.target.value);
@@ -135,7 +144,12 @@ const AudioPlayer = ({ audioUrl, num }) => {
           <div className='flex justify-between items-center'>
             <span>{formatTime(currentTime)} </span>
             <div className='flex justify-between items-center text-4xl gap-4 '>
-              <IoIosRepeat />
+              <Tooltip content={`${loop}`} >
+                <div className='cursor-pointer' onClick={() => repeat()} >
+
+                  <IoIosRepeat />
+                </div>
+              </Tooltip>
               <TbPlayerTrackPrevFilled />
               <button className='' onClick={handlePlayPause}>
                 {isPlaying ? currentTime ? <FaPauseCircle /> : <Spinner className='h-10 w-10' color="blue" /> : <FaPlayCircle />}
@@ -222,5 +236,4 @@ const AudioPlayer = ({ audioUrl, num }) => {
 };
 
 export default AudioPlayer;
-
 

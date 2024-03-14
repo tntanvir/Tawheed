@@ -89,12 +89,7 @@ const SurahSearchFiller = ({ surahs }) => {
 
     return (
         <div className='min-h-screen flex flex-col items-center '>
-            {/* <input
-                type="text"
-                placeholder="Search Surahs"
-                value={searchTerm}
-                onChange={handleSearch}
-            /> */}
+
 
             <div className='flex justify-center w-full'>
                 <div className='dark:bg-[#fffefe3a] bg-[#bab5b549] rounded-tl-full rounded-bl-full flex justify-between items-center p-2 px-4 md:w-1/2 w-2/3 gap-6'>
