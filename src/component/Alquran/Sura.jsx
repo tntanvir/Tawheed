@@ -139,17 +139,17 @@ const Sura = () => {
 
                                 {
 
-                                    activeTab == "Arabi" && <AudioPlayer audioUrl={`https://download.quranicaudio.com/qdc/mishari_al_afasy/murattal/${sura.number}.mp3`} num={1} />
+                                    activeTab == "Arabi" && <AudioPlayer audioUrl={`https://download.quranicaudio.com/qdc/mishari_al_afasy/murattal/${sura.number}.mp3`} num={1} id={id} />
 
 
                                 }
                                 {
 
-                                    activeTab == "Bangla" && <AudioPlayer audioUrl={`https://www.truemuslims.net/Quran/Bangla/${formatNumber(sura.number)}.mp3`} num={2} />
+                                    activeTab == "Bangla" && <AudioPlayer audioUrl={`https://www.truemuslims.net/Quran/Bangla/${formatNumber(sura.number)}.mp3`} num={1} id={id} />
 
                                 }
                                 {
-                                    activeTab == "English" && <AudioPlayer audioUrl={`https://download.quran.islamway.net/quran3/641/${formatNumber(sura.number)}.mp3`} num={1} />
+                                    activeTab == "English" && <AudioPlayer audioUrl={`https://download.quran.islamway.net/quran3/641/${formatNumber(sura.number)}.mp3`} num={1} id={id} />
 
 
 

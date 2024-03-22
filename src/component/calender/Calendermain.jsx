@@ -3,7 +3,7 @@
 import { ButtonGroup } from '@material-tailwind/react';
 import { Select, Option } from "@material-tailwind/react";
 import { Button } from '@material-tailwind/react';
-const TABLE_HEAD = ["Date", "Fajar", "Dhore", "Asr", "Megrib", "Isha"];
+const TABLE_HEAD = ["Date", "Fajar", "Sunrise", "Dhore", "Asr", "Megrib", "Isha"];
 // import fack from '../../fack.json';
 import year from '../../year.json';
 import months from '../../months.json';
@@ -207,6 +207,13 @@ const Calendermain = () => {
                                                     <Typography variant="small" color="blue-gray" className="font-normal">
                                                         {
                                                             count(e.timings.Fajr)
+                                                        }
+                                                    </Typography>
+                                                </td>
+                                                <td className="p-4">
+                                                    <Typography variant="small" color="blue-gray" className="font-normal">
+                                                        {
+                                                            count(e.timings.Sunrise)
                                                         }
                                                     </Typography>
                                                 </td>

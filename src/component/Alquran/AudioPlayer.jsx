@@ -14,9 +14,11 @@ import {
   IconButton,
 } from "@material-tailwind/react";
 import { IoChevronUpCircleOutline } from 'react-icons/io5';
+import { Link } from 'react-router-dom';
+import { document } from 'postcss';
 
 // ================================================
-const AudioPlayer = ({ audioUrl, num }) => {
+const AudioPlayer = ({ audioUrl, num, id }) => {
   const [openMenu, setOpenMenu] = useState(false);
   const [volume, setVolume] = useState(0.3);
   const [currentTime, setCurrentTime] = useState(0);
@@ -62,6 +64,9 @@ const AudioPlayer = ({ audioUrl, num }) => {
       audio.removeEventListener('ended', handleEnded);
     };
   }, [loop]);
+
+
+
 
 
   const handleVolumeChange = (e) => {
@@ -125,8 +130,37 @@ const AudioPlayer = ({ audioUrl, num }) => {
     setPlaybackSpeed(newSpeed);
   };
 
+
+
+
+
+  useEffect(() => {
+    localStorage.setItem("storedNumber", id)
+  }, [id])
+
+
+
+  useEffect(() => {
+    const times = localStorage.getItem(`${id}`)
+    console.log(times);
+    if (times) {
+      setCurrentTime(times);
+    }
+  }, [id])
+
+
+
+  const Puse = () => {
+    localStorage.setItem(`${id}`, currentTime)
+  }
+
+
+
+
+
   return (
     <div className='flex  justify-center items-center flex-col bg ring-deep-purple-400 w-full'>
+
       <audio ref={audioRef} src={audioUrl} preload="metadata" />
       <div className='w-full flex items-center justify-center'>
         <div>
@@ -150,21 +184,80 @@ const AudioPlayer = ({ audioUrl, num }) => {
                   <IoIosRepeat />
                 </div>
               </Tooltip>
-              <TbPlayerTrackPrevFilled />
+              {
+                id == 1 ?
+                  <Tooltip content={"Previous"}>
+                    <Link to={`/alquran/114`}>
+                      <div className='cursor-pointer'>
+                        <TbPlayerTrackPrevFilled />
+                      </div>
+                    </Link>
+                  </Tooltip>
+                  :
+                  <Tooltip content={"Previous"}>
+                    <Link to={`/alquran/${parseInt(id) - 1}`}>
+                      <div className='cursor-pointer'>
+                        <TbPlayerTrackPrevFilled />
+                      </div>
+                    </Link>
+                  </Tooltip>
+
+
+
+
+              }
               <button className='' onClick={handlePlayPause}>
-                {isPlaying ? currentTime ? <FaPauseCircle /> : <Spinner className='h-10 w-10' color="blue" /> : <FaPlayCircle />}
+                {isPlaying ?
+                  currentTime ?
+                    <Tooltip content={"Puse"}>
+                      <div className='cursor-pointer' onClick={() => Puse()}>
+                        <FaPauseCircle />
+                      </div>
+                    </Tooltip>
+
+                    : <Spinner className='h-10 w-10' color="blue" />
+                  :
+                  <Tooltip content={"Play"}>
+                    <div className='cursor-pointer'>
+                      <FaPlayCircle />
+                    </div>
+                  </Tooltip>
+
+
+                }
               </button>
-              <TbPlayerTrackNextFilled />
+              {id == 114 ?
+                <Tooltip Tooltip content={"Next"}>
+                  <Link to={`/alquran/1`}>
+                    <div className='cursor-pointer'>
+
+                      <TbPlayerTrackNextFilled />
+                    </div>
+                  </Link>
+                </Tooltip>
+
+                :
+                <Tooltip Tooltip content={"Next"}>
+                  <Link to={`/alquran/${parseInt(id) + 1}`}>
+                    <div className='cursor-pointer'>
+
+                      <TbPlayerTrackNextFilled />
+                    </div>
+                  </Link>
+                </Tooltip>
+              }
 
               <Menu dismiss={{
                 itemPress: false,
               }}>
-                <MenuHandler>
-                  <IconButton variant="text">
+                <Tooltip content={"Menu"}>
+                  <MenuHandler>
+                    <IconButton variant="text">
+                      <HiDotsVertical className='text-2xl text-white ' />
+                    </IconButton>
+                  </MenuHandler>
+                </Tooltip>
 
-                    <HiDotsVertical className='text-2xl text-white ' />
-                  </IconButton>
-                </MenuHandler>
                 <MenuList className="flex flex-col gap-2">
 
                   <MenuItem onClick={handleDownload} className='flex justify-between'>
@@ -231,9 +324,22 @@ const AudioPlayer = ({ audioUrl, num }) => {
 
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 
 export default AudioPlayer;
+
+
+
+
+
+
+
+
+
+
+
+
+
 

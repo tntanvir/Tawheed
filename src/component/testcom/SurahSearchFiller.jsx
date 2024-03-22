@@ -34,7 +34,7 @@ const SurahSearchFiller = ({ surahs }) => {
         if (searchTerm === '') {
             return surahs.map((e) => (
 
-                <Link key={e.number} to={`${e.englishName}/${e.number}/${e.name}`}>
+                <Link key={e.number} to={`${e.number}`}>
                     <div onClick={() => updateNumber(e.number)} className={`flex text-white w-[22rem] lg:w-96 p-3 gap-3 bg-grayr  hover:bg-grayh rounded-md justify-between items-center cursor-pointer hover:scale-105 duration-200 `}>
                         <div className='flex items-center justify-between gap-2'>
                             <div className='flex justify-center items-center w-11 h-11 p-1 rounded-full border-2'>
@@ -61,7 +61,7 @@ const SurahSearchFiller = ({ surahs }) => {
 
         return searchResults.map((e) => (
 
-            <Link key={e.number} to={`${e.englishName}/${e.number}/${e.name}`}>
+            <Link key={e.number} to={`${e.number}`}>
                 <div onClick={() => updateNumber(e.number)} className={`flex text-white w-[22rem] lg:w-96 p-3 gap-3 bg-grayr  hover:bg-grayh rounded-md justify-between items-center cursor-pointer hover:scale-105 duration-200 `}>
                     <div className='flex items-center justify-between gap-2'>
                         <div className='flex justify-center items-center w-11 h-11 p-1 rounded-full border-2'>

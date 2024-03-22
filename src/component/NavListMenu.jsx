@@ -65,7 +65,7 @@ function NavListMenu() {
             // <a key={key} className="">
             <Link key={key} to={link} >
 
-                <MenuItem className="flex  items-center gap-3 rounded-lg hover:bg-[#323232]">
+                <div className="flex   items-center gap-3 rounded-lg hover:bg-[#323232]">
                     <div className="flex  items-center justify-center rounded-lg bg-[#1d4ed8] p-2 ">
                         { }
                         {React.createElement(icon, {
@@ -88,7 +88,7 @@ function NavListMenu() {
                             {description}
                         </Typography>
                     </div>
-                </MenuItem>
+                </div>
             </Link>
             // </a>
         ),
@@ -126,7 +126,7 @@ function NavListMenu() {
                     </Typography>
                 </MenuHandler>
                 <MenuList className="hidden max-w-screen-xl rounded-xl lg:block bg-[#18181B]">
-                    <ul className="grid grid-cols-2 gap-y-2 outline-none outline-0 ">
+                    <ul className="grid grid-cols-2 gap-y-2 outline-none outline-0 gap-3 ">
                         {renderItems}
                     </ul>
                 </MenuList>
@@ -149,10 +149,10 @@ function NavList() {
                 className="font-medium"
             >
                 {/* <ListItem className="flex items-center gap-2 py-2 pr-4">Home</ListItem> */}
-                <Link to="/home" >
-                    <ListItem className="flex items-center gap-2 py-2 pr-4 hover:bg-transparent hover:text-[#1d4ed8] font-bold duration-500">
+                <Link to="/" >
+                    <div className="flex items-center gap-2 py-2 pr-4 hover:bg-transparent hover:text-[#1d4ed8] font-bold duration-500">
                         Home
-                    </ListItem>
+                    </div>
                 </Link>
 
             </Typography>
@@ -162,11 +162,11 @@ function NavList() {
                 // href="#"
                 variant="small"
                 color="white"
-                className="font-medium"
+                className="font-medium cursor-pointer"
             >
-                <ListItem className="flex items-center gap-2 py-2 pr-4 hover:bg-transparent hover:text-[#1d4ed8] font-bold duration-500">
+                <div className="flex items-center gap-2 py-2 pr-4 hover:bg-transparent hover:text-[#1d4ed8] font-bold duration-500">
                     Contact Us
-                </ListItem>
+                </div>
             </Typography>
         </List>
     );

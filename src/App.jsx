@@ -18,9 +18,8 @@ function App() {
 
       <Routes >
         <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
         <Route path="/alquran" element={<Alquran />} />
-        <Route path="/alquran/:sura/:id/:arabi" element={<Sura />} />
+        <Route path="/alquran/:id" element={<Sura />} />
         <Route path="/hadis" element={<MainHadis />} />
         <Route path="/hadis/:id/:name" element={<HadisAllbook />} />
         <Route path="/hadis/:id/:name/section-hadis/:key" element={<HadisSection />} />
