@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import h from '../../h.json';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { Button, Option, Select } from '@material-tailwind/react';
 
 const MainHadis = () => {
     // store
@@ -15,11 +16,40 @@ const MainHadis = () => {
         setLast(parseInt(store));
     }, [])
 
+
+    const [selectedValue, setSelectedValue] = useState('ara-abudawud');
+    const [num, setNum] = useState('');
+
+    const handleChange = (event) => {
+        setSelectedValue(event.target.value);
+    };
+
     return (
         <div className='min-h-screen'>
 
             <div className='flex flex-col  items-center justify-center gap-4 mt-10 md:mt-3 '>
+                <div className='flex gap-1 items-center justify-center border border-blueo rounded-md overflow-hidden md:flex-row flex-col '>
 
+                    <div className="md:w-72 w-36 z-10">
+                        <select
+                            onChange={handleChange}
+                            value={selectedValue}
+                            className='py-2 outline-none rounded-l-md w-full duration-500 text-white bg-transparent '>
+
+                            {h.map((e) => (
+                                <option value={e.name2} className='text-black ' key={e.id}>{e.name}</option>
+                            ))}
+                        </select>
+                    </div>
+                    <input
+                        value={num}
+                        onChange={(e) => setNum(e.target.value)}
+
+                        type="text" name="" id="" className='bg-transparent outline-none  text-white  py-1.5 ' placeholder='Enter Number' />
+                    <Link to={`${selectedValue}/${num}`}>
+                        <Button className='bg-blueo rounded-none'>Search</Button>
+                    </Link>
+                </div>
                 {
                     h.map((e) => (
                         <Link key={e.id} to={`${e.name2}`} >
