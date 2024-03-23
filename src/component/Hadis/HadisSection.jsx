@@ -3,9 +3,9 @@ import { Spinner } from '@material-tailwind/react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { FaCopy } from 'react-icons/fa';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import lenguse from './lenguse.json';
-import { RiArrowDropDownLine } from "react-icons/ri";
+import { RiArrowDropDownLine, RiExternalLinkLine } from "react-icons/ri";
 import {
     Accordion,
 
@@ -98,17 +98,20 @@ const HadisSection = () => {
 
                             </Tabs>
                         </div>
-                        <div className='gap-2 flex flex-col'>
+                        <div className='gap-2 flex flex-col '>
                             {
                                 section && section.hadiths.map(e => (
                                     <div key={e.hadithnumber} className='bg-[#27272a] rounded-md py-5 md:px-2  min-h-[10rem]  md:flex justify-between cursor-pointer duration-1000'>
-                                        <div className='flex items-center md:flex-col w-16 xs:bg-red-900 pb-6 gap-5'>
+                                        <div className='flex items-center md:flex-col w-16 xs:bg-red-900 pb-6 gap-4'>
                                             <div className='flex justify-center items-center w-11 h-11 p-1 rounded-full border-2'>
 
                                                 <h1>{e.hadithnumber}</h1>
                                             </div>
                                             <h1 className='hover:text-[#1d4ed8] text-2xl duration-300' onClick={() => copyToClipboard(e.text)}><FaCopy /></h1>
                                             <h1 onClick={() => handleOpen(e.hadithnumber)} className='hover:text-[#1d4ed8] text-5xl duration-300' ><RiArrowDropDownLine /></h1>
+                                            <Link to={`/hadis/${name}/${e.hadithnumber}`}>
+                                                <h1 className='text-2xl font-bold'><RiExternalLinkLine /> </h1>
+                                            </Link>
                                         </div>
                                         <div className='p-3 md:w-11/12'>
                                             <h1 className={`${sortlg === "ara-" ? "text-end" : "text-justify"} text-4xl  duration-300 `}>{e.text}</h1>

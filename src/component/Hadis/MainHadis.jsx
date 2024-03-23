@@ -22,7 +22,7 @@ const MainHadis = () => {
 
                 {
                     h.map((e) => (
-                        <Link key={e.id} to={`${e.id}/${e.name2}`} >
+                        <Link key={e.id} to={`${e.name2}`} >
                             <div onClick={() => updateNumber(e.id)} className={`flex text-white w-[25rem]  md:w-[80vw] p-3 gap-3 bg-grayr  hover:bg-grayh rounded-md justify-between items-center cursor-pointer duration-200 `}>
                                 <div className='flex items-center justify-between gap-2'>
                                     <div className='flex justify-center items-center w-11 h-11 p-1 rounded-full border-2'>
