@@ -25,12 +25,14 @@ const MainHadis = () => {
     };
 
     return (
-        <div className='min-h-screen'>
+        <div className='min-h-screen p-1'>
 
-            <div className='flex flex-col  items-center justify-center gap-4 mt-10 md:mt-3 '>
-                <div className='flex gap-1 items-center justify-center border border-blueo rounded-md overflow-hidden md:flex-row flex-col '>
+            {/* search */}
+            <div className='flex justify-center'>
 
-                    <div className="md:w-72 w-36 z-10">
+                <div className='flex gap-1 items-center justify-center border border-blueo rounded-md overflow-hidden  w-fit'>
+
+                    <div className="md:w-72 w-1/2 z-10">
                         <select
                             onChange={handleChange}
                             value={selectedValue}
@@ -45,15 +47,17 @@ const MainHadis = () => {
                         value={num}
                         onChange={(e) => setNum(e.target.value)}
 
-                        type="text" name="" id="" className='bg-transparent outline-none  text-white  py-1.5 ' placeholder='Enter Number' />
+                        type="text" name="" id="" className='bg-transparent outline-none w-1/2  text-white  py-1.5 ' placeholder='Enter Number' />
                     <Link to={`${selectedValue}/${num}`}>
                         <Button className='bg-blueo rounded-none'>Search</Button>
                     </Link>
                 </div>
+            </div>
+            <div className='flex flex-col  items-center justify-center md:gap-4 gap-2 mt-10 md:mt-3 '>
                 {
                     h.map((e) => (
                         <Link key={e.id} to={`${e.name2}`} >
-                            <div onClick={() => updateNumber(e.id)} className={`flex text-white w-[25rem]  md:w-[80vw] p-3 gap-3 bg-grayr  hover:bg-grayh rounded-md justify-between items-center cursor-pointer duration-200 `}>
+                            <div onClick={() => updateNumber(e.id)} className={`flex text-white  w-[22rem]  md:w-[80vw] p-3 gap-3 bg-grayr  hover:bg-grayh rounded-md justify-between items-center cursor-pointer duration-200 `}>
                                 <div className='flex items-center justify-between gap-2'>
                                     <div className='flex justify-center items-center w-11 h-11 p-1 rounded-full border-2'>
                                         <h1 className='text-2xl'>{e.id}</h1>
@@ -70,6 +74,8 @@ const MainHadis = () => {
                                     }
                                 </div>
                             </div>
+
+
                         </Link>
                     ))
 

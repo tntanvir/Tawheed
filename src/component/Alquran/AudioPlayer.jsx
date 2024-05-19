@@ -47,6 +47,7 @@ const AudioPlayer = ({ audioUrl, num, id }) => {
     const handleEnded = () => {
       setCurrentTime(0);
       audio.currentTime = 0;
+      localStorage.setItem(`${id}`, currentTime)
       if (initialLoopValue) {
         audio.play();
       } else {

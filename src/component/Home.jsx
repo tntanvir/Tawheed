@@ -8,7 +8,9 @@ import Calendermain from "./calender/Calendermain";
 const Home = () => {
 
     return (
+
         <div className="Poppins ">
+
             <MainHome />
             <Hero></Hero>
             <Calendermain></Calendermain>

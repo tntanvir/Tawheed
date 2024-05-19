@@ -65,7 +65,7 @@ function NavListMenu() {
             // <a key={key} className="">
             <Link key={key} to={link} >
 
-                <div className="flex   items-center gap-3 rounded-lg hover:bg-[#323232]">
+                <div className="flex p-0.5  items-center gap-3 rounded-lg hover:bg-[#323232] my-1">
                     <div className="flex  items-center justify-center rounded-lg bg-[#1d4ed8] p-2 ">
                         { }
                         {React.createElement(icon, {
@@ -140,7 +140,7 @@ function NavListMenu() {
 
 function NavList() {
     return (
-        <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1  ">
+        <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1 md:justify-center md:items-center justify-start items-start ">
             <Typography
                 as="li"
                 // href="#"
