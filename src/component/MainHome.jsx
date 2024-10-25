@@ -6,6 +6,7 @@ import { TypeAnimation } from 'react-type-animation';
 const MainHome = () => {
     return (
         <div className='h-screen flex justify-center items-center flex-col max-w-2xl m-auto text-center text-white '>
+
             <TypeAnimation
                 sequence={[
                     'TAWHEED',

@@ -1,0 +1,658 @@
+[
+  {
+    "id": 1,
+    "name": "Abdul Baset"
+  },
+  {
+    "id": 2,
+    "name": "Abdul Baset"
+  },
+  {
+    "id": 3,
+    "name": "Abdurrahmaan As Sudais"
+  },
+  {
+    "id": 4,
+    "name": "Abu Bakr Shatri"
+  },
+  {
+    "id": 5,
+    "name": "Hani Ar Rifai"
+  },
+  {
+    "id": 6,
+    "name": "Khalil Al Husary"
+  },
+  {
+    "id": 7,
+    "name": "Mishari Al Afasy"
+  },
+  {
+    "id": 8,
+    "name": "Siddiq Al-minshawi"
+  },
+  {
+    "id": 9,
+    "name": "Siddiq Minshawi"
+  },
+  {
+    "id": 10,
+    "name": "Saud Ash-shuraym"
+  },
+  {
+    "id": 11,
+    "name": "Abdul Muhsin Alqasim"
+  },
+  {
+    "id": 12,
+    "name": "Khalil Al Husary"
+  },
+  {
+    "id": 13,
+    "name": "Sa3d Al-ghaamidi"
+  },
+  {
+    "id": 14,
+    "name": "Fares"
+  },
+  {
+    "id": 15,
+    "name": "Thubaity"
+  },
+  {
+    "id": 17,
+    "name": "Sahl Yaaseen"
+  },
+  {
+    "id": 18,
+    "name": "Salaah Bukhaatir"
+  },
+  {
+    "id": 19,
+    "name": "Ahmed Ibn 3ali Al-3ajamy"
+  },
+  {
+    "id": 20,
+    "name": "Sodais And Shuraim"
+  },
+  {
+    "id": 21,
+    "name": "Abdulazeez Al-ahmad"
+  },
+  {
+    "id": 22,
+    "name": "Muhammad Ayyoob"
+  },
+  {
+    "id": 23,
+    "name": "Tawfeeq Bin Saeed-as-sawaaigh"
+  },
+  {
+    "id": 24,
+    "name": "Abdullaah Alee Jaabir"
+  },
+  {
+    "id": 25,
+    "name": "Madinah 1419"
+  },
+  {
+    "id": 26,
+    "name": "Mehysni"
+  },
+  {
+    "id": 28,
+    "name": "Jibreen"
+  },
+  {
+    "id": 29,
+    "name": "Makkah 1426"
+  },
+  {
+    "id": 30,
+    "name": "Madinah 1426"
+  },
+  {
+    "id": 31,
+    "name": "Sa3d Al-ghaamidi"
+  },
+  {
+    "id": 32,
+    "name": "Muhammad Jibreel"
+  },
+  {
+    "id": 33,
+    "name": "Madinah 1427"
+  },
+  {
+    "id": 34,
+    "name": "Makkah 1427"
+  },
+  {
+    "id": 35,
+    "name": "Saleh Al Taleb"
+  },
+  {
+    "id": 36,
+    "name": "Sudais Shuraim And English"
+  },
+  {
+    "id": 39,
+    "name": "Muhammad Ayub And Mikaal Waters"
+  },
+  {
+    "id": 40,
+    "name": "Abdulwadood Haneef"
+  },
+  {
+    "id": 42,
+    "name": "Shakir Qasami With English"
+  },
+  {
+    "id": 43,
+    "name": "Salahbudair"
+  },
+  {
+    "id": 44,
+    "name": "Aziz Alili"
+  },
+  {
+    "id": 45,
+    "name": "Makkah 1425"
+  },
+  {
+    "id": 46,
+    "name": "Madinah 1423"
+  },
+  {
+    "id": 47,
+    "name": "Abdulbaset With Naeem Sultan Pickthall"
+  },
+  {
+    "id": 48,
+    "name": "Sudais Shuraim With Naeem Sultan Pickthall"
+  },
+  {
+    "id": 49,
+    "name": "Mishaari With Saabir Mkhan"
+  },
+  {
+    "id": 51,
+    "name": "Maher Almu3aiqly"
+  },
+  {
+    "id": 52,
+    "name": "Maher Almu3aiqly"
+  },
+  {
+    "id": 53,
+    "name": "Muhammad Alhaidan"
+  },
+  {
+    "id": 54,
+    "name": "Abdulbaset Warsh"
+  },
+  {
+    "id": 55,
+    "name": "Alhusaynee Al3azazee With Children"
+  },
+  {
+    "id": 56,
+    "name": "Jibreen"
+  },
+  {
+    "id": 57,
+    "name": "Abdulbasit W Ibrahim Walk Si"
+  },
+  {
+    "id": 58,
+    "name": "Mishaari W Ibrahim Walk Si"
+  },
+  {
+    "id": 59,
+    "name": "Makkah 1428"
+  },
+  {
+    "id": 60,
+    "name": "Abdurrashid Sufi Soosi Rec"
+  },
+  {
+    "id": 61,
+    "name": "Sadaqat Ali"
+  },
+  {
+    "id": 62,
+    "name": "Abdurrashid Sufi - Khalaf 3an 7amza Recitation"
+  },
+  {
+    "id": 63,
+    "name": "Makkah 1424"
+  },
+  {
+    "id": 64,
+    "name": "Hamad Sinan"
+  },
+  {
+    "id": 65,
+    "name": "Maher 256"
+  },
+  {
+    "id": 66,
+    "name": "Abdullah Basfar W Ibrahim Walk Si"
+  },
+  {
+    "id": 67,
+    "name": "Sudais And Shuraim With Urdu"
+  },
+  {
+    "id": 68,
+    "name": "Abdulrazaq Bin Abtan Al Dulaimi"
+  },
+  {
+    "id": 69,
+    "name": "Abdullaah Alee Jaabir Studio"
+  },
+  {
+    "id": 70,
+    "name": "Muhammad Abdulkareem"
+  },
+  {
+    "id": 71,
+    "name": "Mustafa Al3azzawi"
+  },
+  {
+    "id": 72,
+    "name": "Khayat"
+  },
+  {
+    "id": 73,
+    "name": "Madinah 1428"
+  },
+  {
+    "id": 74,
+    "name": "Dr.shawqy 7amed"
+  },
+  {
+    "id": 75,
+    "name": "Dr.shawqy 7amed"
+  },
+  {
+    "id": 77,
+    "name": "Makkah 1429"
+  },
+  {
+    "id": 78,
+    "name": "Mahmood Khaleel Al-husaree Doori"
+  },
+  {
+    "id": 79,
+    "name": "Mu7ammad 7assan"
+  },
+  {
+    "id": 80,
+    "name": "Salah Alhashim"
+  },
+  {
+    "id": 81,
+    "name": "Adel Kalbani"
+  },
+  {
+    "id": 82,
+    "name": "Makkah 1430"
+  },
+  {
+    "id": 83,
+    "name": "Makkah 1431"
+  },
+  {
+    "id": 84,
+    "name": "Madinah 1431"
+  },
+  {
+    "id": 85,
+    "name": "Hatem Farid"
+  },
+  {
+    "id": 86,
+    "name": "Hatem Farid"
+  },
+  {
+    "id": 87,
+    "name": "Hatem Farid"
+  },
+  {
+    "id": 88,
+    "name": "Mostafa Ismaeel"
+  },
+  {
+    "id": 90,
+    "name": "Muhammad Patel"
+  },
+  {
+    "id": 91,
+    "name": "Mohammad Altablawi"
+  },
+  {
+    "id": 92,
+    "name": "Mohammad Ismaeel Almuqaddim"
+  },
+  {
+    "id": 93,
+    "name": "Imad Zuhair Hafez"
+  },
+  {
+    "id": 94,
+    "name": "Makkah 1432"
+  },
+  {
+    "id": 95,
+    "name": "Mishaari California"
+  },
+  {
+    "id": 96,
+    "name": "Hatem Farid"
+  },
+  {
+    "id": 97,
+    "name": "Yasser Ad-dussary"
+  },
+  {
+    "id": 98,
+    "name": "Makkah 1433"
+  },
+  {
+    "id": 99,
+    "name": "Madinah 1429"
+  },
+  {
+    "id": 100,
+    "name": "Madinah 1430"
+  },
+  {
+    "id": 101,
+    "name": "Madinah 1432"
+  },
+  {
+    "id": 102,
+    "name": "Madinah 1433"
+  },
+  {
+    "id": 103,
+    "name": "Ibrahim Al Akhdar"
+  },
+  {
+    "id": 104,
+    "name": "Nasser Bin Ali Alqatami"
+  },
+  {
+    "id": 105,
+    "name": "Khalid Alghamdi"
+  },
+  {
+    "id": 106,
+    "name": "Abdulkareem Al Hazmi"
+  },
+  {
+    "id": 107,
+    "name": "Muhammad Ayyoob Hq"
+  },
+  {
+    "id": 108,
+    "name": "Abdulmun3im Abdulmubdi2"
+  },
+  {
+    "id": 109,
+    "name": "Abdurrashid Sufi"
+  },
+  {
+    "id": 110,
+    "name": "Abdurrashid Sufi Abi Al7arith"
+  },
+  {
+    "id": 111,
+    "name": "Abdurrashid Sufi Doori"
+  },
+  {
+    "id": 112,
+    "name": "Abdurrashid Sufi Shu3ba"
+  },
+  {
+    "id": 113,
+    "name": "Ahmad Alhuthayfi"
+  },
+  {
+    "id": 114,
+    "name": "Huthayfi Qaloon"
+  },
+  {
+    "id": 115,
+    "name": "Abu Bakr Ash-shatri Tarawee7"
+  },
+  {
+    "id": 116,
+    "name": "Idrees Akbar"
+  },
+  {
+    "id": 117,
+    "name": "Bandar Baleela"
+  },
+  {
+    "id": 118,
+    "name": "Masjid Quba 1434"
+  },
+  {
+    "id": 119,
+    "name": "Muhammad Khaleel"
+  },
+  {
+    "id": 120,
+    "name": "Makkah 1434"
+  },
+  {
+    "id": 121,
+    "name": "Muhaisny 1435"
+  },
+  {
+    "id": 122,
+    "name": "Mahmood Khaleel Al-husaree Iza3a"
+  },
+  {
+    "id": 123,
+    "name": "Madinah 1435"
+  },
+  {
+    "id": 124,
+    "name": "Abdullah Matroud"
+  },
+  {
+    "id": 125,
+    "name": "Abdul Wadood Haneef Rare"
+  },
+  {
+    "id": 126,
+    "name": "Ahmad Nauina"
+  },
+  {
+    "id": 127,
+    "name": "Akram Al Alaqmi"
+  },
+  {
+    "id": 128,
+    "name": "Ali Hajjaj Alsouasi"
+  },
+  {
+    "id": 129,
+    "name": "Mahmood Ali Albana"
+  },
+  {
+    "id": 130,
+    "name": "Wadee Hammadi Al-yamani"
+  },
+  {
+    "id": 131,
+    "name": "Makkah 1435"
+  },
+  {
+    "id": 132,
+    "name": "Makkah 1436"
+  },
+  {
+    "id": 133,
+    "name": "Makkah 1437"
+  },
+  {
+    "id": 134,
+    "name": "Fatih Seferagic"
+  },
+  {
+    "id": 135,
+    "name": "Asim Abdulaleem"
+  },
+  {
+    "id": 136,
+    "name": "Abdallah Abdal"
+  },
+  {
+    "id": 137,
+    "name": "Abdurrashid Sufi Soosi 2020"
+  },
+  {
+    "id": 138,
+    "name": "Adel Kalbani 1437"
+  },
+  {
+    "id": 139,
+    "name": "Hatem Farid"
+  },
+  {
+    "id": 140,
+    "name": "Hatem Farid"
+  },
+  {
+    "id": 141,
+    "name": "Husary Muallim"
+  },
+  {
+    "id": 142,
+    "name": "Husary Muallim Kids Repeat"
+  },
+  {
+    "id": 143,
+    "name": "Madinah 1434"
+  },
+  {
+    "id": 144,
+    "name": "Madinah 1436"
+  },
+  {
+    "id": 145,
+    "name": "Madinah 1437"
+  },
+  {
+    "id": 146,
+    "name": "Madinah 1439"
+  },
+  {
+    "id": 147,
+    "name": "Madinah 1440"
+  },
+  {
+    "id": 148,
+    "name": "Madinah 1441"
+  },
+  {
+    "id": 149,
+    "name": "Madinah 1442"
+  },
+  {
+    "id": 150,
+    "name": "Makkah 1438"
+  },
+  {
+    "id": 151,
+    "name": "Makkah 1439"
+  },
+  {
+    "id": 152,
+    "name": "Makkah 1440"
+  },
+  {
+    "id": 153,
+    "name": "Makkah 1441"
+  },
+  {
+    "id": 154,
+    "name": "Makkah 1442"
+  },
+  {
+    "id": 155,
+    "name": "Noreen Siddiq"
+  },
+  {
+    "id": 156,
+    "name": "Sa3ood Al-shuraym"
+  },
+  {
+    "id": 157,
+    "name": "Sodais And Shuraim"
+  },
+  {
+    "id": 158,
+    "name": "Ali Jaber"
+  },
+  {
+    "id": 159,
+    "name": "Maher Almu3aiqly"
+  },
+  {
+    "id": 160,
+    "name": "Bandar Baleela"
+  },
+  {
+    "id": 161,
+    "name": "Khalifah Taniji"
+  },
+  {
+    "id": 162,
+    "name": "Abdullaah 3awwaad Al-juhaynee"
+  },
+  {
+    "id": 163,
+    "name": "Abdullaah Basfar"
+  },
+  {
+    "id": 165,
+    "name": "Nabil Rifa3i"
+  },
+  {
+    "id": 166,
+    "name": "Khaalid Al-qahtaanee"
+  },
+  {
+    "id": 167,
+    "name": "Huthayfi"
+  },
+  {
+    "id": 168,
+    "name": "Siddiq Minshawi"
+  },
+  {
+    "id": 169,
+    "name": "Muhammad Jibreel"
+  },
+  {
+    "id": 170,
+    "name": "Khalid Jalil"
+  },
+  {
+    "id": 172,
+    "name": "Hadi Toure"
+  },
+  {
+    "id": 173,
+    "name": "Mishari Al Afasy"
+  },
+  {
+    "id": 174,
+    "name": "Yasser Ad-dussary"
+  }
+]

@@ -14,6 +14,7 @@ import { Tabs } from '@material-tailwind/react';
 
 const Sura = () => {
     const { id } = useParams()
+    const { qari } = useParams()
     const [sura, Setsura] = useState();
     useEffect(() => {
         fetch(`https://api.alquran.cloud/v1/surah/${id}/ar.alafasy`)
@@ -70,18 +71,46 @@ const Sura = () => {
     const [activeTab, setActiveTab] = useState("Arabi");
 
     // ________________________________________________________
+
+
+
+    // const getAudioUrl = (url) => {
+    //     fetch(url)
+    //         .then(res => res.json())
+    //         .then(data => console.log(data.audio_url))
+    // }
+    const [audioUrl, setAudioUrl] = useState(null);
+    useEffect(() => {
+        fetch(`https://api.quran.com/api/v4/chapter_recitations/${qari}/${id}`)
+            .then(res => res.json())
+            .then(data => {
+                setAudioUrl(data.audio_file?.audio_url)
+
+            })
+    }, [id, qari])
+
+
+
+
+
+
+
+
+
+
     return (
         <div className='text-white  min-h-screen px-4'>
             {
                 sura ?
                     <div className='relative'>
+
                         <div className='text-center'>
                             <h1 className='text-3xl'>{sura.englishName}</h1>
                             <h1 className='text-2xl'>{sura.name}</h1>
                             <h1>{sura.revelationType} - {sura.numberOfAyahs}</h1>
                         </div>
                         <div className='flex justify-between items-center'>
-                            <Link to="/alquran">
+                            <Link to={`/qari/${qari}`}>
                                 <div className='flex items-center text-2xl cursor-pointer'>
                                     <IoCaretBackOutline />
                                 </div>
@@ -139,7 +168,8 @@ const Sura = () => {
 
                                 {
 
-                                    activeTab == "Arabi" && <AudioPlayer audioUrl={`https://download.quranicaudio.com/qdc/mishari_al_afasy/murattal/${sura.number}.mp3`} num={1} id={id} />
+                                    activeTab == "Arabi" && <AudioPlayer audioUrl={audioUrl} num={1} id={id} />
+
 
 
                                 }

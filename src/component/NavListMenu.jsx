@@ -31,7 +31,7 @@ const navListMenuItems = [
         title: "Al-Quran",
         description: "Find the perfect solution for your needs.",
         icon: GiBookmarklet,
-        link: "/alquran",
+        link: "/qari",
     },
     {
         title: "Hadis",

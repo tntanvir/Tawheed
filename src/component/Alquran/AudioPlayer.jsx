@@ -16,6 +16,7 @@ import {
 import { IoChevronUpCircleOutline } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 import { document } from 'postcss';
+import Downloader from '../Downloader';
 
 // ================================================
 const AudioPlayer = ({ audioUrl, num, id }) => {
@@ -161,7 +162,9 @@ const AudioPlayer = ({ audioUrl, num, id }) => {
 
   return (
     <div className='flex  justify-center items-center flex-col bg ring-deep-purple-400 w-full'>
-
+      {
+        audioUrl ? console.log('audio', audioUrl) : console.log('none')
+      }
       <audio ref={audioRef} src={audioUrl} preload="metadata" />
       <div className='w-full flex items-center justify-center'>
         <div>
@@ -261,9 +264,12 @@ const AudioPlayer = ({ audioUrl, num, id }) => {
 
                 <MenuList className="flex flex-col gap-2">
 
-                  <MenuItem onClick={handleDownload} className='flex justify-between'>
+                  <MenuItem className='flex justify-between'>
 
-                    <h1>Download</h1>
+                    {/* <h1>Download</h1> */}
+                    <Downloader fileName={'tanvir.mp3'} url={audioUrl} />
+                    {/* <a href={`${audioUrl}`} download>Test Download</a> */}
+
                     <FaDownload />
 
                   </MenuItem>
@@ -330,17 +336,5 @@ const AudioPlayer = ({ audioUrl, num, id }) => {
 };
 
 export default AudioPlayer;
-
-
-
-
-
-
-
-
-
-
-
-
 
 

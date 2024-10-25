@@ -9,6 +9,7 @@ import MainHadis from "./component/Hadis/MainHadis";
 import HadisAllbook from "./component/Hadis/HadisAllbook";
 import HadisSection from "./component/Hadis/HadisSection";
 import Singlehadis from "./component/Hadis/Singlehadis";
+import Qari from "./component/Alquran/Qari";
 
 function App() {
 
@@ -19,8 +20,10 @@ function App() {
 
       <Routes >
         <Route path="/" element={<Home />} />
-        <Route path="/alquran" element={<Alquran />} />
-        <Route path="/alquran/:id" element={<Sura />} />
+        <Route path="/qari/:id" element={<Alquran />} />
+        <Route path="/qari" element={<Qari />} />
+
+        <Route path="/qari/:qari/alquran/:id" element={<Sura />} />
         <Route path="/hadis" element={<MainHadis />} />
         <Route path="/hadis/:name" element={<HadisAllbook />} />
         <Route path="/hadis/:name/:id" element={<Singlehadis />} />

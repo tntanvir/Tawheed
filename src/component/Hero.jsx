@@ -57,11 +57,29 @@ const Hero = () => {
     const [open, setOpen] = useState(false);
     const [location, setLocation] = useState('Dhaka');
     const [custom, setCustom] = useState('');
-    const [location2, setLocation2] = useState('');
+    const [location2, setLocation2] = useState(localStorage.getItem('sTime') ? localStorage.getItem('sTime') : 'Dhaka');
+
+
+    const [filterText, setFilterText] = useState(""); // State to store input value
+
+
+
+    // Function to handle input change for filtering
+    const handleInputChange = (e) => {
+        setFilterText(e.target.value.toLowerCase()); // Convert to lowercase for case-insensitive filtering
+    };
+
+    // Function to filter and dynamically fill options
+    const filteredOptions = fack.filter((e) =>
+        e.name.toLowerCase().includes(filterText)
+    );
+
 
     const handleOpen = () => setOpen(!open);
     const selectvlue = (e) => {
         setLocation2(e)
+        console.log(e);
+
     }
     const Update = () => {
         if (custom == "") {
@@ -250,10 +268,22 @@ const Hero = () => {
                                             :
 
                                             <Select label="Select Location"
-                                                onChange={selectvlue}
-                                                required>
+                                                className="text-black"
+                                                value="lk"
+                                                onChange={(e) => selectvlue(e)}
+                                            >
+                                                <div className="mt-4 text-sm text-gray-400">
+                                                    Selected Location: {location2 || "None"}
+                                                </div>
+                                                <input
+                                                    type="text"
+                                                    className="mb-4 p-2 border border-gray-300 rounded w-full"
+                                                    placeholder="Filter locations"
+                                                    onChange={handleInputChange}
+                                                    value={filterText}
+                                                />
                                                 {
-                                                    fack.map((e) => <Option key={e.id} value={e.name}>{e.name}</Option>)
+                                                    filteredOptions.map((e) => <Option key={e.id} value={e.name}>{e.name}</Option>)
                                                 }
                                             </Select>
 
@@ -270,6 +300,10 @@ const Hero = () => {
                                     </Button>
                                 </DialogFooter>
                             </Dialog>
+
+
+
+
                         </>
                     </p>
                 </div>
