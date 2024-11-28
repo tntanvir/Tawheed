@@ -55,9 +55,9 @@ const Hero = () => {
 
     //popup---------------
     const [open, setOpen] = useState(false);
-    const [location, setLocation] = useState('Dhaka');
+    const [location, setLocation] = useState('Rangpur');
     const [custom, setCustom] = useState('');
-    const [location2, setLocation2] = useState(localStorage.getItem('sTime') ? localStorage.getItem('sTime') : 'Dhaka');
+    const [location2, setLocation2] = useState(localStorage.getItem('sTime') ? localStorage.getItem('sTime') : 'Rangpur');
 
 
     const [filterText, setFilterText] = useState(""); // State to store input value
