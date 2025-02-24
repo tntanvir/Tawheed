@@ -1,5 +1,6 @@
 import Hero from "./Hero";
 import MainHome from "./MainHome";
+
 import Calendermain from "./calender/Calendermain";
 
 
@@ -13,7 +14,8 @@ const Home = () => {
 
             <MainHome />
             <Hero></Hero>
-            <Calendermain></Calendermain>
+            {/* <Calendermain></Calendermain> */}
+
         </div>
 
     );

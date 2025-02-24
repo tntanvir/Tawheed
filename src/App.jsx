@@ -10,6 +10,8 @@ import HadisAllbook from "./component/Hadis/HadisAllbook";
 import HadisSection from "./component/Hadis/HadisSection";
 import Singlehadis from "./component/Hadis/Singlehadis";
 import Qari from "./component/Alquran/Qari";
+import Planer from "./component/Planer/Planer";
+import Calendermain from "./component/calender/Calendermain";
 
 function App() {
 
@@ -20,8 +22,10 @@ function App() {
 
       <Routes >
         <Route path="/" element={<Home />} />
+        <Route path="/celender" element={<Calendermain />} />
         <Route path="/qari/:id" element={<Alquran />} />
         <Route path="/qari" element={<Qari />} />
+        <Route path="/planer" element={<Planer />} />
 
         <Route path="/qari/:qari/alquran/:id" element={<Sura />} />
         <Route path="/hadis" element={<MainHadis />} />

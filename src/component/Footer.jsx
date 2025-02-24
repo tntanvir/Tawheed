@@ -2,7 +2,7 @@ import { Typography } from "@material-tailwind/react";
 
 export function FooterWithLogo() {
     return (
-        <footer className="w-full bg-[#18181B] text-white  p-8">
+        <footer className="w-full bg-[#000000] text-white  p-8">
             <div className="flex flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 text-white  text-center md:justify-between">
                 {/* <img src="https://docs.material-tailwind.com/img/logo-ct-dark.png" alt="logo-ct" className="w-10" /> */}
                 <h1 className="font-bold tracking-[0.2rem]">TAWHEED</h1>

@@ -4,7 +4,8 @@
 @tailwind utilities;
 
 body {
-    @apply box-border bg-[#18181B]
+    /* @apply box-border bg-[#18181B] */
+    @apply box-border bg-[#000000]
 }
 
 :root {
@@ -21,4 +22,12 @@ body {
     border-radius: 20px;
 
 
+}
+
+
+
+@layer utilities {
+    .blurred-bg {
+        @apply w-[200px] sm:w-[300px] md:w-[500px] h-[100px] sm:h-[200px] md:h-[200px] rounded-full blur-[500px] sm:blur-[150px] bg-blue-500/40 dark:bg-blue-700/20;
+    }
 }

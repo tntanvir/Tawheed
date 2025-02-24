@@ -115,7 +115,7 @@ const Calendermain = () => {
 
     return (
         <div className=" min-h-screen md:px-5 ">
-            <div className="h-fit bg-[#27272a] text-white  mt-10 md:p-10 p-3 md:rounded-md">
+            <div className="h-fit bg-[#0f1014] text-white  mt-10 md:p-10 p-3 md:rounded-md">
 
                 <h1 className='text-2xl font-semibold'>Salat Timetable</h1>
                 <div className="flex flex-col justify-center mt-4 items-center">
@@ -125,10 +125,10 @@ const Calendermain = () => {
                             <Button onClick={month} className='text-white'>Monthly</Button>
                             <Button onClick={years} disabled className='text-white'>Yearly</Button>
                         </ButtonGroup> */}
-                        <ButtonGroup color="blue">
+                        {/* <ButtonGroup color="blue">
                             <Button onClick={month} className='text-white'>Monthly</Button>
-                            {/* <Button onClick={years} className='text-white'>Yearly</Button> */}
-                        </ButtonGroup>
+                            <Button onClick={years} className='text-white'>Yearly</Button>
+                        </ButtonGroup> */}
                     </div>
                     <div className='flex flex-col justify-cente gap-2'>
                         {

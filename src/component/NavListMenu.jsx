@@ -41,19 +41,25 @@ const navListMenuItems = [
 
     },
     {
-        title: "Blog",
+        title: "Celender",
         description: "Find the perfect solution for your needs.",
         icon: Bars4Icon,
-        link: "/blog",
+        link: "/celender",
 
     },
 
-    {
-        title: "Contact",
-        description: "Find the perfect solution for your needs.",
-        icon: PhoneIcon,
-        link: "/contact",
-    },
+    // {
+    //     title: "Contact",
+    //     description: "Find the perfect solution for your needs.",
+    //     icon: PhoneIcon,
+    //     link: "/contact",
+    // },
+    // {
+    //     title: "Planer",
+    //     description: "Find the perfect solution for your needs.",
+    //     icon: PhoneIcon,
+    //     link: "/planer",
+    // },
 
 ];
 
@@ -65,7 +71,7 @@ function NavListMenu() {
             // <a key={key} className="">
             <Link key={key} to={link} >
 
-                <div className="flex p-0.5  items-center gap-3 rounded-lg hover:bg-[#323232] my-1">
+                <div className="flex p-0.5  items-center gap-3 rounded-lg hover:bg-[#ffffff0e] my-1">
                     <div className="flex  items-center justify-center rounded-lg bg-[#1d4ed8] p-2 ">
                         { }
                         {React.createElement(icon, {
@@ -125,7 +131,7 @@ function NavListMenu() {
                         </ListItem>
                     </Typography>
                 </MenuHandler>
-                <MenuList className="hidden max-w-screen-xl rounded-xl lg:block bg-[#18181B]">
+                <MenuList className="hidden max-w-screen-xl rounded-xl lg:block bg-[#0f1014]">
                     <ul className="grid grid-cols-2 gap-y-2 outline-none outline-0 gap-3 ">
                         {renderItems}
                     </ul>
@@ -198,7 +204,7 @@ export function NavbarWithMegaMenu() {
 
 
     return (
-        <Navbar className={`sticky z-50  top-0 m-0 mx-auto max-w-full px-4 py-2 rounded-none bg-[#18181B] text-white border-0 ${nav ? 'shadow-md' : 'shadow-none'}`}>
+        <Navbar className={`sticky z-50  top-0 m-0 mx-auto max-w-full px-4 py-2 rounded-none bg-[#000000] text-white border-0 ${nav ? 'shadow-md' : 'shadow-none'}`}>
             <div className="flex items-center justify-between text-white">
                 <Typography
                     as="li"

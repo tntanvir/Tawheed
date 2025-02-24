@@ -164,7 +164,7 @@ const Sura = () => {
                         </div>
                         <div className=' flex flex-col gap-7 justify-center mt-3 items-center '>
 
-                            <div className={`h-fit flex justify-center items-center bg-[#2e2e40] gap-5 p-0 rounded-md fixed bottom-1 w-[90vw] ${show ? "block" : "hidden"} transition duration-1000`}>
+                            <div className={`h-fit flex justify-center items-center bg-[#1d1d21ef] gap-5 p-0 rounded-md fixed bottom-1 w-[90vw] ${show ? "block" : "hidden"} transition duration-1000`}>
 
                                 {
 
@@ -196,7 +196,7 @@ const Sura = () => {
                         <div className=' gap-7 flex flex-col md:p-4'>
                             {
                                 activeTab == "Arabi" && sura.ayahs && sura.ayahs.map(({ text, numberInSurah, audio }) => (
-                                    <div key={numberInSurah} className='bg-[#27272a] rounded-md py-5 md:px-2  min-h-[10rem]  md:flex justify-between cursor-pointer '>
+                                    <div key={numberInSurah} className='bg-[#0f1014] rounded-md py-5 md:px-2  min-h-[10rem]  md:flex justify-between cursor-pointer '>
                                         <div className='flex items-center md:flex-col w-16 xs:bg-red-900 pb-6 gap-5'>
                                             <div className='flex justify-center items-center w-11 h-11 p-1 rounded-full border-2'>
                                                 {/* <h1 className='text-2xl'>{e.number}</h1> */}
@@ -215,7 +215,7 @@ const Sura = () => {
                             }
                             {
                                 activeTab == "Bangla" && bangla && bangla.map(({ text, id, translation }) => (
-                                    <div key={id} className='bg-[#27272a] rounded-md py-5 md:px-2  min-h-[10rem]  md:flex justify-between cursor-pointer '>
+                                    <div key={id} className='bg-[#0f1014] rounded-md py-5 md:px-2  min-h-[10rem]  md:flex justify-between cursor-pointer '>
                                         <div className='flex items-center md:flex-col w-16 xs:bg-red-900 pb-6 gap-5'>
                                             <div className='flex justify-center items-center w-11 h-11 p-1 rounded-full border-2'>
                                                 {/* <h1 className='text-2xl'>{e.number}</h1> */}
@@ -235,7 +235,7 @@ const Sura = () => {
                             }
                             {
                                 activeTab == "English" && english && english.map(({ text, id, translation }) => (
-                                    <div key={id} className='bg-[#27272a] rounded-md py-5 md:px-2  min-h-[10rem]  md:flex justify-between cursor-pointer '>
+                                    <div key={id} className='bg-[#0f1014] rounded-md py-5 md:px-2  min-h-[10rem]  md:flex justify-between cursor-pointer '>
                                         <div className='flex items-center md:flex-col w-16 xs:bg-red-900 pb-6 gap-5'>
                                             <div className='flex justify-center items-center w-11 h-11 p-1 rounded-full border-2'>
                                                 {/* <h1 className='text-2xl'>{e.number}</h1> */}

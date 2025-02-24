@@ -1,0 +1,212 @@
+[
+    {
+        "id": 1,
+        "title": "1st Ramadan",
+        "quran": {
+            "ar": "شَهْرُ رَمَضَانَ ٱلَّذِىٓ أُنزِلَ فِيهِ ٱلْقُرْءَانُ هُدًۭى لِّلنَّاسِ وَبَيِّنَٰتٍۢ مِّنَ ٱلْهُدَىٰ وَٱلْفُرْقَانِ ۚ فَمَن شَهِدَ مِنكُمُ ٱلشَّهْرَ فَلْيَصُمْهُ ۖ",
+            "bn": "রমযান মাসই হল সে মাস, যাতে নাযিল করা হয়েছে কোরআন।",
+            "en": "The month of Ramadan [is that] in which was revealed the Qur'an."
+        },
+        "hadis": {
+            "ar": "مَنْ صَامَ رَمَضَانَ إِيمَانًا وَاحْتِسَابًا غُفِرَ لَهُ مَا تَقَدَّمَ مِنْ ذَنْبِهِ.",
+            "bn": "যে ব্যক্তি রমাযানের সিয়াম ব্রত পালন করে, তার গুনাহ ক্ষমা করা হয়।",
+            "en": "Whoever observes fasts during the month of Ramadan, his past sins will be forgiven."
+        },
+        "doya": {
+            "ar": "اللَّهُمَّ لَكَ صُمْتُ وَعَلَى رِزْقِكَ أَفْطَرْتُ.",
+            "bn": "হে আল্লাহ! আমি আপনার উদ্দেশ্যেই সওম পালন করেছি।",
+            "en": "O Allah, I fasted for You and broke my fast with Your provision."
+        },
+        "work": "Reflect on the importance of fasting.",
+        "date": "2022-01-01"
+    },
+    {
+        "id": 2,
+        "title": "2nd Ramadan",
+        "quran": {
+            "ar": "وَاعْتَصِمُوا بِحَبْلِ اللَّهِ جَمِيعًا وَلَا تَفَرَّقُوا ۚ",
+            "bn": "তোমরা সবাই আল্লাহর রজ্জুকে দৃঢ়ভাবে ধারণ কর।",
+            "en": "And hold firmly to the rope of Allah all together and do not become divided."
+        },
+        "hadis": {
+            "ar": "خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ.",
+            "bn": "তোমাদের মধ্যে সর্বোত্তম হল সেই ব্যক্তি যে কুরআন শেখে এবং শিক্ষা দেয়।",
+            "en": "The best among you are those who learn the Qur'an and teach it."
+        },
+        "doya": {
+            "ar": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً.",
+            "bn": "হে আমাদের রব! আমাদের দুনিয়াতে ও আখিরাতে কল্যাণ দান করুন।",
+            "en": "Our Lord, give us in this world [that which is] good and in the Hereafter [that which is] good."
+        },
+        "work": "Recite and reflect on a Surah from the Quran.",
+        "date": "2022-01-02"
+    },
+    {
+        "id": 3,
+        "title": "3rd Ramadan",
+        "quran": {
+            "ar": "إِنَّ الصَّلَاةَ تَنْهَىٰ عَنِ الْفَحْشَاءِ وَالْمُنكَرِ.",
+            "bn": "নিশ্চয়ই সালাত মানুষকে অশ্লীল ও মন্দ কাজ থেকে বিরত রাখে।",
+            "en": "Indeed, prayer prohibits immorality and wrongdoing."
+        },
+        "hadis": {
+            "ar": "إِنَّمَا الْأَعْمَالُ بِالنِّيَّاتِ.",
+            "bn": "নিয়তের উপরই সমস্ত কাজ নির্ভর করে।",
+            "en": "Actions are judged by intentions."
+        },
+        "doya": {
+            "ar": "اللَّهُمَّ اجْعَلْنَا مِنْ أَهْلِ الْجَنَّةِ.",
+            "bn": "হে আল্লাহ! আমাদের জান্নাতবাসীদের অন্তর্ভুক্ত করুন।",
+            "en": "O Allah, make us among the people of Paradise."
+        },
+        "work": "Offer additional prayers (Tahajjud).",
+        "date": "2022-01-03"
+    },
+    {
+        "id": 4,
+        "title": "4th Ramadan",
+        "quran": {
+            "ar": "وَمَنْ يَتَّقِ اللَّهَ يَجْعَلْ لَهُ مَخْرَجًا.",
+            "bn": "যে ব্যক্তি আল্লাহকে ভয় করে, আল্লাহ তার জন্য পথ তৈরি করে দেবেন।",
+            "en": "And whoever fears Allah - He will make for him a way out."
+        },
+        "hadis": {
+            "ar": "الدُّنْيَا سِجْنُ الْمُؤْمِنِ.",
+            "bn": "দুনিয়া মুমিনের জন্য কারাগার।",
+            "en": "The world is a prison for the believer."
+        },
+        "doya": {
+            "ar": "اللَّهُمَّ اغْفِرْ لَنَا ذُنُوبَنَا.",
+            "bn": "হে আল্লাহ! আমাদের গুনাহ মাফ করুন।",
+            "en": "O Allah, forgive us our sins."
+        },
+        "work": "Help someone in need.",
+        "date": "2022-01-04"
+    },
+    {
+        "id": 5,
+        "title": "5th Ramadan",
+        "quran": {
+            "ar": "إِنَّمَا الْمُؤْمِنُونَ إِخْوَةٌ.",
+            "bn": "নিশ্চয়ই মুমিনরা পরস্পর ভাই ভাই।",
+            "en": "The believers are but brothers."
+        },
+        "hadis": {
+            "ar": "الْمُسْلِمُ أَخُو الْمُسْلِمِ.",
+            "bn": "এক মুসলিম অন্য মুসলিমের ভাই।",
+            "en": "A Muslim is a brother of another Muslim."
+        },
+        "doya": {
+            "ar": "اللَّهُمَّ اجْمَعْنَا عَلَى طَاعَتِكَ.",
+            "bn": "হে আল্লাহ! আমাদের আপনার আনুগত্যে ঐক্যবদ্ধ করুন।",
+            "en": "O Allah, unite us in obedience to You."
+        },
+        "work": "Promote peace and unity.",
+        "date": "2022-01-05"
+    },
+    {
+        "id": 6,
+        "title": "6th Ramadan",
+        "quran": {
+            "ar": "وَمَنْ أَحْسَنُ قَوْلًا مِّمَّن دَعَا إِلَى اللَّهِ.",
+            "bn": "তার চেয়ে উত্তম কথা আর কার হতে পারে, যে আল্লাহর দিকে আহ্বান করে।",
+            "en": "And who is better in speech than one who invites to Allah."
+        },
+        "hadis": {
+            "ar": "الدِّينُ النَّصِيحَةُ.",
+            "bn": "ধর্ম হল সদুপদেশ।",
+            "en": "The religion is sincere advice."
+        },
+        "doya": {
+            "ar": "اللَّهُمَّ هَبْ لَنَا حِكْمَةً وَفَصَاحَةً.",
+            "bn": "হে আল্লাহ! আমাদের জ্ঞান ও বাকপটুতা দান করুন।",
+            "en": "O Allah, grant us wisdom and eloquence."
+        },
+        "work": "Give sincere advice to someone. ",
+        "date": "2022-01-06"
+    },
+    {
+        "id": 7,
+        "title": "7th Ramadan",
+        "quran": {
+            "ar": "إِنَّ رَبَّكَ وَاسِعُ الْمَغْفِرَةِ.",
+            "bn": "নিশ্চয়ই আপনার রব অতি ক্ষমাশীল।",
+            "en": "Indeed, your Lord is vast in forgiveness."
+        },
+        "hadis": {
+            "ar": "إِنَّ اللَّهَ يُحِبُّ التَّوَّابِينَ.",
+            "bn": "নিশ্চয়ই আল্লাহ তওবাকারীদের ভালোবাসেন।",
+            "en": "Indeed, Allah loves those who repent."
+        },
+        "doya": {
+            "ar": "اللَّهُمَّ اجْعَلْنَا مِنَ التَّوَّابِينَ.",
+            "bn": "হে আল্লাহ! আমাদের তওবাকারীদের অন্তর্ভুক্ত করুন।",
+            "en": "O Allah, make us among those who repent."
+        },
+        "work": "Seek forgiveness for your sins.",
+        "date": "2022-01-07"
+    },
+    {
+        "id": 8,
+        "title": "8th Ramadan",
+        "quran": {
+            "ar": "وَأَقِيمُوا الصَّلَاةَ وَآتُوا الزَّكَاةَ.",
+            "bn": "তোমরা সালাত কায়েম কর এবং যাকাত দাও।",
+            "en": "And establish prayer and give zakah."
+        },
+        "hadis": {
+            "ar": "الصَّدَقَةُ تُطْفِئُ غَضَبَ الرَّبِّ.",
+            "bn": "সাদকা আল্লাহর ক্রোধকে প্রশমিত করে।",
+            "en": "Charity extinguishes the wrath of the Lord."
+        },
+        "doya": {
+            "ar": "اللَّهُمَّ اجْعَلْنَا مِنَ الْمُتَصَدِّقِينَ.",
+            "bn": "হে আল্লাহ! আমাদের দানশীলদের অন্তর্ভুক্ত করুন।",
+            "en": "O Allah, make us among the charitable."
+        },
+        "work": "Donate to a charitable cause.",
+        "date": "2022-01-08"
+    },
+    {
+        "id": 9,
+        "title": "9th Ramadan",
+        "quran": {
+            "ar": "وَلَا تَقْرَبُوا الزِّنَىٰ.",
+            "bn": "তোমরা ব্যভিচারের কাছেও যেয়ো না।",
+            "en": "And do not approach unlawful sexual intercourse."
+        },
+        "hadis": {
+            "ar": "إِنَّمَا الْحَيَاءُ خَيْرٌ كُلُّهُ.",
+            "bn": "লজ্জা সবসময় কল্যাণকর।",
+            "en": "Modesty is always good."
+        },
+        "doya": {
+            "ar": "اللَّهُمَّ زَيِّنَّا بِالْحَيَاءِ.",
+            "bn": "হে আল্লাহ! আমাদের লজ্জাশীলতায় সজ্জিত করুন।",
+            "en": "O Allah, adorn us with modesty."
+        },
+        "work": "Practice modesty in your actions.",
+        "date": "2022-01-09"
+    },
+    {
+        "id": 10,
+        "title": "10th Ramadan",
+        "quran": {
+            "ar": "وَقُولُوا لِلنَّاسِ حُسْنًا.",
+            "bn": "মানুষের সাথে উত্তম কথা বলো।",
+            "en": "And speak to people good words."
+        },
+        "hadis": {
+            "ar": "الْكَلِمَةُ الطَّيِّبَةُ صَدَقَةٌ.",
+            "bn": "উত্তম কথা সাদকার মতো।",
+            "en": "A good word is charity."
+        },
+        "doya": {
+            "ar": "اللَّهُمَّ اجْعَلْ أَلْسِنَتَنَا طَيِّبَةً.",
+            "bn": "হে আল্লাহ! আমাদের জবানকে উত্তম করুন।",
+            "en": "O Allah, make our tongues virtuous."
+        },
+        "work": "Spread kind words among people.",
+        "date": "2022-01-10"
+    }
+]

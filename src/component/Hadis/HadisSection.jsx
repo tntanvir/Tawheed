@@ -101,7 +101,7 @@ const HadisSection = () => {
                         <div className='gap-2 flex flex-col '>
                             {
                                 section && section.hadiths.map(e => (
-                                    <div key={e.hadithnumber} className='bg-[#27272a] rounded-md py-5 md:px-2  min-h-[10rem]  md:flex justify-between cursor-pointer duration-1000'>
+                                    <div key={e.hadithnumber} className='bg-grayr rounded-md py-5 md:px-2  min-h-[10rem]  md:flex justify-between cursor-pointer duration-1000'>
                                         <div className='flex items-center md:flex-col w-16 xs:bg-red-900 pb-6 gap-4'>
                                             <div className='flex justify-center items-center w-11 h-11 p-1 rounded-full border-2'>
 
