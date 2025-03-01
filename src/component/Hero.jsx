@@ -16,6 +16,7 @@ import {
 import { Typography } from "@material-tailwind/react";
 import { Select } from "@material-tailwind/react";
 import fack from '../fack.json'
+import { Badge } from "@material-tailwind/react";
 
 
 const Hero = () => {
@@ -159,12 +160,14 @@ const Hero = () => {
                     {
                         data.Fajr ?
 
-                            <div className="bg-[#ffffff0e] hover:bg-[#27272a]  rounded-md text-center w-36 h-36 md:w-48 md:h-48   flex justify-center items-center flex-col md:p-3 cursor-pointer">
-                                <h1 className="font-semibold text-2xl ">Fajr</h1>
-                                <h1 className="text-2xl ">0{count(data.Fajr)}</h1>
-                                <CountdownTimer time={count(data.Fajr)} id={1} />
-                                {/* <CountdownTimer time="10:11 AM" /> */}
-                            </div>
+                            <Badge content="Sahuri" className="bg-blue-600/50" placement="top-start">
+                                <div className="bg-[#ffffff0e] hover:bg-[#27272a]  rounded-md text-center w-36 h-36 md:w-48 md:h-48   flex justify-center items-center flex-col md:p-3 cursor-pointer">
+                                    <h1 className="font-semibold text-2xl ">Fajr</h1>
+                                    <h1 className="text-2xl ">0{count(data.Fajr)}</h1>
+                                    <CountdownTimer time={count(data.Fajr)} id={1} />
+                                    {/* <CountdownTimer time="10:11 AM" /> */}
+                                </div>
+                            </Badge >
                             : <div></div>
                     }
                     {
@@ -194,13 +197,14 @@ const Hero = () => {
                     {
                         data.Maghrib ?
 
-                            // console.log(data.Asr)
-                            <div className="bg-[#ffffff0e] hover:bg-[#27272a]  shadow-sm   rounded-md text-center w-36 h-36 md:w-48 md:h-48   flex justify-center items-center flex-col md:p-3 cursor-pointer">
-                                <h1 className="font-semibold text-2xl">Maghrib</h1>
-                                <h1 className="text-2xl "> 0{count(data.Maghrib)}</h1>
-                                <CountdownTimer time={count(data.Maghrib)} id={4} />
+                            <Badge content="Ifter" className="bg-blue-600/50" placement="top-start">
+                                <div className="bg-[#ffffff0e] hover:bg-[#27272a]  shadow-sm   rounded-md text-center w-36 h-36 md:w-48 md:h-48   flex justify-center items-center flex-col md:p-3 cursor-pointer">
+                                    <h1 className="font-semibold text-2xl">Maghrib</h1>
+                                    <h1 className="text-2xl "> 0{count(data.Maghrib)}</h1>
+                                    <CountdownTimer time={count(data.Maghrib)} id={4} />
 
-                            </div>
+                                </div>
+                            </Badge>
                             : <div></div>
                     }
                     {
